@@ -36,8 +36,8 @@ ed_settings <- read_ods(file.path(dir, filename),
   pivot_wider(names_from = "test") %>%
   mutate(total = positive + negative)
 
-sec_schools <- read_excel(here::here("data", "tests_conducted_2021_02_25.xlsx"),
-                    sheet = "Table_7", skip = 2) %>%
+sec_schools <- read_ods(file.path(dir, filename),
+                        sheet = "Table_7", skip = 2) %>%
   slice(c(3:5, 7:9)) %>%
   clean_names() %>%
   rename(name = x1) %>%
