@@ -7,6 +7,11 @@ library("tidyr")
 library("ggplot2")
 library("scales")
 library("binom")
+# Install covidregionaldata using drat
+#library("drat")
+#drat:::add("epiforecasts")
+#install.packages("covidregionaldata")
+library("covidregionaldata")
 
 dir <- tempdir()
 filename <- "tests_conducted_2021_02_25.ods"
