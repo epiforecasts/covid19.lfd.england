@@ -90,16 +90,14 @@ ggplot(dfb, aes(x = date, y = mean, colour = school,
   xlab("") +
   theme(legend.position = "bottom")
 
-estimate_min_specificity <- function(positive, total, cutoff = 0.95) {
+estimate_min_specificity <- function(positive, total, cutoff = 0.95,
+                                     samples = 100) {
 
   dta <- tibble(positive = positive, total = total)
 
-  N <- 100
-  samples <- 100
-
   spec <- dta %>%
     expand_grid(specificity = seq(99.7 / 100, 99.9995 / 100,
-                length.out = N)) %>%
+                length.out = samples)) %>%
     ## probability of seeing positives given specificty is at most x
     ## (where at the maximum all positives are false positives)
     mutate(p = pbeta(1 - specificity, positive + 1,
