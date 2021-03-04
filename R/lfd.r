@@ -5,6 +5,7 @@ library("dplyr")
 library("janitor")
 library("tidyr")
 library("ggplot2")
+library("scales")
 library("binom")
 
 dir <- tempdir()
@@ -97,7 +98,8 @@ estimate_min_specificity <- function(positive, total, cutoff = 0.95) {
   samples <- 100
 
   spec <- dta %>%
-    expand_grid(specificity = seq(99.7/100, 99.9995/100, length.out = N)) %>%
+    expand_grid(specificity = seq(99.7 / 100, 99.9995 / 100,
+                length.out = N)) %>%
     ## probability of seeing positives given specificty is at most x
     ## (where at the maximum all positives are false positives)
     mutate(p = pbeta(1 - specificity, positive + 1,
