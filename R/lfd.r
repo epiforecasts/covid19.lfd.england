@@ -147,3 +147,4 @@ sums <- dfb %>%
 
 fp <- qbinom(c(0.025, 0.5, 0.975), sums$total, (1 - res$estimate))
 sums$positive - fp
+ 
