@@ -7,10 +7,6 @@ library("ggplot2")
 library("scales")
 library("binom")
 library("lubridate")
-# Install covidregionaldata using drat
-#library("drat")
-#drat:::add("epiforecasts")
-#install.packages("covidregionaldata")
 library("covidregionaldata")
 
 dir <- tempdir()
@@ -83,7 +79,7 @@ dfb <- df_all %>%
   cbind(uncert) %>%
   filter(date != "2020-12-24", date >= "2020-11-25")
 
-ggplot(dfb, aes(x = date, y = mean, colour = school,
+p_testing <- ggplot(dfb, aes(x = date, y = mean, colour = school,
                ymin = lower, ymax = upper, fill = school)) +
   geom_point() +
   geom_line() +
@@ -95,38 +91,6 @@ ggplot(dfb, aes(x = date, y = mean, colour = school,
   xlab("") +
   theme(legend.position = "bottom")
 
-estimate_min_specificity <- function(positive, total, cutoff = 0.95,
-                                     samples = 100) {
-
-  dta <- tibble(positive = positive, total = total)
-
-  spec <- dta %>%
-    expand_grid(specificity = seq(99.7 / 100, 99.9995 / 100,
-                length.out = samples)) %>%
-    ## probability of seeing positives given specificty is at most x
-    ## (where at the maximum all positives are false positives)
-    mutate(p = pbeta(1 - specificity, positive + 1,
-                     total - positive + 1, lower.tail = FALSE)) %>%
-    group_by(specificity) %>%
-    ## overall probability that specificity is at most x
-    summarise(probability = 1 - prod(p), .groups = "drop") %>%
-    ungroup()
-
-  prob <- spec %>%
-    ## get probability that specificity is at least x
-    filter(probability > cutoff) %>%
-    summarise(min_spec = max(specificity)) %>%
-    .$min_spec
-
-  p_spec <- ggplot(spec %>%
-                   filter(probability > 0 & probability < 1),
-                   aes(x = specificity, y = probability)) +
-    scale_x_continuous(label = scales::comma) +
-    geom_line() + theme_minimal()
-
-  return(list(estimate = prob, figure = p_spec))
-}
-
 res <- estimate_min_specificity(dfb$positive, dfb$total)
 
 dfe <- covidregionaldata::get_regional_data("UK") %>%
@@ -135,7 +99,7 @@ dfe <- covidregionaldata::get_regional_data("UK") %>%
   group_by(date) %>%
   summarise(cases = sum(newCasesBySpecimenDate), .groups = "drop")
 
-ggplot(dfe, aes(x = date, y = cases)) +
+p_cases <- ggplot(dfe, aes(x = date, y = cases)) +
   geom_point() +
   geom_line() +
   xlab("") +
@@ -146,5 +110,3 @@ ggplot(dfe, aes(x = date, y = cases)) +
 sums <- dfb %>%
   summarise_at(vars(positive, negative, total), sum)
 
-fp <- qbinom(c(0.025, 0.5, 0.975), sums$total, (1 - res$estimate))
-sums$positive - fp

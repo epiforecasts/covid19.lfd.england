@@ -1,2 +1,42 @@
-# Code to analyse LFD testing data in educational settings
-To re-create the results, run the script in `R/lfd.r`.
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# LFD mass testing in English schools - additional evidence of high test specificity
+
+This repository contains the data and code for our note:
+
+Funk S, Flasche S, *LFD mass testing in English schools - additional
+evidence of high test specificity*. Available at
+<https://cmmid.github.io/topics/covid19/mass-testing-schools.html>.
+
+### How to download or install
+
+The code depends on the `covidregionaldata` package, which can be
+installed using
+
+``` r
+# install.packages("drat")
+library("drat")
+drat:::add("epiforecasts")
+install.packages("covidregionaldata")
+```
+
+The code itself is installed as an R package, `covid19.lfd.education`,
+from GitHub with:
+
+``` r
+# install.packages("devtools")
+remotes::install_github("sbfnk/covid19.slovakia.mass.testing")
+```
+
+To re-create the results, run the script in `inst/scripts/lfd.r`:
+
+``` r
+source(system.file(package = "covid19.lfd.education", "lfd.r"))
+```
+
+To make changes, just create a copy of `lfd.r` locally and edit this:
+
+``` r
+file.copy(system.file(package = "covid19.lfd.education", "lfd.r"), "my_code_dir/lfd.r")
+```

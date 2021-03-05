@@ -1,0 +1,29 @@
+Package: covid19.lfd.education
+Title: Code accompanying the note "LFD mass testing in English schools - additional evidence of high test specificity"
+Version: 0.0.0.9000
+Authors@R:
+    c(person(given = "Sebastian",
+             family = "Funk",
+             role = c("cre"),
+             email = "sebastian.funk@lshtm.ac.uk"))
+Description: Contains all the code and data required to generate the figures and estimates in the note. 
+Depends:
+    R (>= 4.0.0),
+    readODS,
+    here,
+    dplyr,
+    janitor,
+    tidyr,
+    ggplot2,
+    scales,
+    binom,
+    lubridate,
+    covidregionaldata
+License: MIT
+ByteCompile: true
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/epiforecasts/covid19.lfd.education
+BugReports: https://github.com/epiforecasts/covid19.lfd.education
+RoxygenNote: 7.1.1
+Imports: 

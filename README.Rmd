@@ -1,0 +1,56 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+Title <- "LFD mass testing in English schools - additional evidence of high test specificity"
+```
+
+# LFD mass testing in English schools - additional evidence of high test specificity
+
+This repository contains the data and code for our note:
+
+Funk S, Flasche S,  _`r Title`_. Available at <https://cmmid.github.io/topics/covid19/mass-testing-schools.html>.
+
+### How to download or install
+
+The code depends on the `covidregionaldata` package, which can be installed using
+
+```{r covidregionaldata-install, eval = FALSE}
+# install.packages("drat")
+library("drat")
+drat:::add("epiforecasts")
+install.packages("covidregionaldata")
+```
+
+The code itself is installed as an R package, `covid19.lfd.education`, from GitHub with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+remotes::install_github("sbfnk/covid19.slovakia.mass.testing")
+```
+
+To re-create the results, run the script in `inst/scripts/lfd.r`:
+
+```{r lfd, eval = FALSE}
+source(system.file(package = "covid19.lfd.education",
+                   file.path("inst", "scripts", "lfd.r")))
+res
+```
+
+To make changes, just create a copy of `lfd.r` locally and edit this:
+
+```{r lfd_copy, eval = FALSE}
+file.copy(system.file(package = "covid19.lfd.education",
+                      file.path("inst", "scripts", "lfd.r"),
+                      "my_code_dir/lfd.r")
+```
+
+Documentation for the `estimate_min_specificity` function, which is used to estimate the lower bound of specificity, can be found using `?estimate_min_specificity`.
