@@ -6,6 +6,7 @@ library("tidyr")
 library("ggplot2")
 library("scales")
 library("binom")
+library("lubridate")
 # Install covidregionaldata using drat
 #library("drat")
 #drat:::add("epiforecasts")
