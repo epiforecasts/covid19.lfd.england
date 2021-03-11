@@ -10,10 +10,10 @@ library("lubridate")
 library("covidregionaldata")
 
 dir <- tempdir()
-filename <- "tests_conducted_2021_02_25.ods"
+filename <- "tests_conducted_2021_03_11.ods"
 
 url <- paste0("https://assets.publishing.service.gov.uk/government/uploads/",
-              "system/uploads/attachment_data/file/964677/",
+              "system/uploads/attachment_data/file/968462/",
               filename)
 download.file(url, file.path(dir, filename))
 
