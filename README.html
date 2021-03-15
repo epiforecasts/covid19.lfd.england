@@ -38,11 +38,16 @@ body {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;covidregionaldata&quot;</span>)</span></code></pre></div>
 <p>The code itself is installed as an R package, <code>covid19.lfd.education</code>, from GitHub with:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;devtools&quot;)</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;sbfnk/covid19.slovakia.mass.testing&quot;</span>)</span></code></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;sbfnk/covid19.lfd.education&quot;</span>)</span></code></pre></div>
 <p>To re-create the results, run the script in <code>inst/scripts/lfd.r</code>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">system.file</span>(<span class="at">package =</span> <span class="st">&quot;covid19.lfd.education&quot;</span>, <span class="st">&quot;lfd.r&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">system.file</span>(<span class="at">package =</span> <span class="st">&quot;covid19.lfd.education&quot;</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">file.path</span>(<span class="st">&quot;inst&quot;</span>, <span class="st">&quot;scripts&quot;</span>, <span class="st">&quot;lfd.r&quot;</span>)))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>res</span></code></pre></div>
 <p>To make changes, just create a copy of <code>lfd.r</code> locally and edit this:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">file.copy</span>(<span class="fu">system.file</span>(<span class="at">package =</span> <span class="st">&quot;covid19.lfd.education&quot;</span>, <span class="st">&quot;lfd.r&quot;</span>), <span class="st">&quot;my_code_dir/lfd.r&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">file.copy</span>(<span class="fu">system.file</span>(<span class="at">package =</span> <span class="st">&quot;covid19.lfd.education&quot;</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">file.path</span>(<span class="st">&quot;inst&quot;</span>, <span class="st">&quot;scripts&quot;</span>, <span class="st">&quot;lfd.r&quot;</span>),</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                      <span class="st">&quot;my_code_dir/lfd.r&quot;</span>)</span></code></pre></div>
+<p>Documentation for the <code>estimate_min_specificity</code> function, which is used to estimate the lower bound of specificity, can be found using <code>?estimate_min_specificity</code>.</p>
 
 </body>
 </html>

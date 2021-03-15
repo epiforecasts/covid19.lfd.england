@@ -34,7 +34,7 @@ The code itself is installed as an R package, `covid19.lfd.education`, from GitH
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
-remotes::install_github("sbfnk/covid19.slovakia.mass.testing")
+remotes::install_github("sbfnk/covid19.lfd.education")
 ```
 
 To re-create the results, run the script in `inst/scripts/lfd.r`:
