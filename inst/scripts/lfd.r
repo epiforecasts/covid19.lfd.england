@@ -89,7 +89,7 @@ p_testing <- ggplot(dfb,
   theme_minimal() +
   expand_limits(y = 0) +
   scale_y_continuous("Proportion positive", labels = scales::percent) +
-  xlab("") +
+  xlab("Starting Thursday of week of data") +
   theme(legend.position = "bottom")
 
 res <- estimate_min_specificity(dfb$positive, dfb$total,  samples = 10000)
