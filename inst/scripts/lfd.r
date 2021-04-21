@@ -10,10 +10,10 @@ library("lubridate")
 library("covidregionaldata")
 
 dir <- tempdir()
-filename <- "tests_conducted_2021_04_01.ods"
+filename <- "tests_conducted_2021_04_15.ods"
 
 url <- paste0("https://assets.publishing.service.gov.uk/government/uploads/",
-              "system/uploads/attachment_data/file/975450/",
+              "system/uploads/attachment_data/file/978100/",
               filename)
 download.file(url, file.path(dir, filename))
 
@@ -37,7 +37,7 @@ ed_settings <- read_ods(file.path(dir, filename),
   pivot_longer(names_to = "date", starts_with("x")) %>%
   mutate(value = as.integer(value)) %>%
   filter(!is.na(value)) %>%
-  mutate(date = as.Date(sub("^x([0-9]{2})_([0-9]{2})_([0-9]{2}).*$",
+  mutate(date = as.Date(sub("^.+([0-9]{2})_([0-9]{2})_([0-9]{2})$",
                             "20\\3-\\2-\\1", date))) %>%
   pivot_wider(names_from = "test") %>%
   mutate(total = positive + negative)
@@ -62,7 +62,7 @@ schools <- read_ods(file.path(dir, filename),
   pivot_longer(names_to = "date", starts_with("x")) %>%
   mutate(value = as.integer(value)) %>%
   filter(!is.na(value)) %>%
-  mutate(date = as.Date(sub("^x([0-9]{2})_([0-9]{2})_([0-9]{2}).*$",
+  mutate(date = as.Date(sub("^.+([0-9]{2})_([0-9]{2})_([0-9]{2})$",
                             "20\\3-\\2-\\1", date))) %>%
   pivot_wider(names_from = "test") %>%
   mutate(total = positive + negative)
@@ -76,7 +76,8 @@ uncert <- binom.confint(df_all$positive, df_all$total, method = "exact") %>%
 
 dfb <- df_all %>%
   cbind(uncert) %>%
-  filter(date != "2020-12-24", date >= "2021-02-01")
+  filter(date != "2020-12-24", date >= "2021-02-01") %>%
+  filter(!grepl("Higher|bubble", school))
 
 p_testing <- ggplot(dfb,
                     aes(x = date, y = mean, colour = school,
@@ -89,10 +90,12 @@ p_testing <- ggplot(dfb,
   theme_minimal() +
   expand_limits(y = 0) +
   scale_y_continuous("Proportion positive", labels = scales::percent) +
-  xlab("Starting Thursday of week of data") +
-  theme(legend.position = "bottom")
+  xlab("Final Wednesday of week of data") +
+  theme(legend.position = "bottom") +
+  geom_vline(xintercept = as.Date("2021-03-08"), linetype = "dashed") +
+  geom_vline(xintercept = as.Date("2021-03-31"), linetype = "dashed")
 
-res <- estimate_min_specificity(dfb$positive, dfb$total,  samples = 10000)
+res <- estimate_min_specificity(df_all$positive, df_all$total, samples = 10000)
 
 dfe <- covidregionaldata::get_regional_data("UK") %>%
   mutate(date = floor_date(date, "week", 4)) %>%
