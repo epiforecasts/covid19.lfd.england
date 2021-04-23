@@ -8,13 +8,26 @@ library("scales")
 library("binom")
 library("lubridate")
 library("covidregionaldata")
+library("rvest")
+
+url <- paste0("https://www.gov.uk/government/collections/",
+              "nhs-test-and-trace-statistics-england-weekly-reports")
+session <- session(url)
+
+weekly_url <- session %>%
+  html_nodes(xpath = "//div/ul/li/a") %>%
+  purrr::pluck(1) %>%
+  html_attr("href")
+
+latest <- session %>%
+  session_jump_to(weekly_url)
+
+url <- latest %>%
+  html_nodes(xpath = "//div/h3/a") %>%
+  html_attr("href") %>%
+  grep(pattern = "tests_conducted", value = TRUE)
 
 dir <- tempdir()
-filename <- "tests_conducted_2021_04_15.ods"
-
-url <- paste0("https://assets.publishing.service.gov.uk/government/uploads/",
-              "system/uploads/attachment_data/file/978100/",
-              filename)
 download.file(url, file.path(dir, filename))
 
 ed_settings <- read_ods(file.path(dir, filename),
@@ -93,23 +106,7 @@ p_testing <- ggplot(dfb,
   xlab("Final Wednesday of week of data") +
   theme(legend.position = "bottom") +
   geom_vline(xintercept = as.Date("2021-03-08"), linetype = "dashed") +
-  geom_vline(xintercept = as.Date("2021-03-31"), linetype = "dashed")
+  geom_vline(xintercept = as.Date("2021-03-31"), linetype = "dashed") +
+  geom_vline(xintercept = as.Date("2021-04-19"), linetype = "dashed")
 
 res <- estimate_min_specificity(df_all$positive, df_all$total, samples = 10000)
-
-dfe <- covidregionaldata::get_regional_data("UK") %>%
-  mutate(date = floor_date(date, "week", 4)) %>%
-  filter(region == "England", date %in% dfb$date) %>%
-  group_by(date) %>%
-  summarise(cases = sum(newCasesBySpecimenDate), .groups = "drop")
-
-p_cases <- ggplot(dfe, aes(x = date, y = cases)) +
-  geom_point() +
-  geom_line() +
-  xlab("") +
-  scale_y_continuous("Number of cases", labels = scales::comma) +
-  theme_minimal() +
-  expand_limits(y = 0)
-
-sums <- dfb %>%
-  summarise_at(vars(positive, negative, total), sum)
