@@ -9,6 +9,7 @@ library("binom")
 library("lubridate")
 library("covidregionaldata")
 library("rvest")
+library("covid19.lfd.education")
 
 url <- paste0("https://www.gov.uk/government/collections/",
               "nhs-test-and-trace-statistics-england-weekly-reports")
@@ -108,5 +109,8 @@ p_testing <- ggplot(dfb,
   geom_vline(xintercept = as.Date("2021-03-08"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2021-03-31"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2021-04-19"), linetype = "dashed")
+
+suppressWarnings(dir.create(here::here("figure")))
+ggsave(here::here("figure", "lfd_testing.pdf"), p_testing)
 
 res <- estimate_min_specificity(df_all$positive, df_all$total, samples = 10000)
