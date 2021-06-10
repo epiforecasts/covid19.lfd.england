@@ -51,6 +51,7 @@ to estimate the lower bound of specificity, can be found using
 
 ### Latest LFD positive prevalence
 
-Updated on: 2021-06-10
+Updated on: 2021-06-10. Periods during which schools were closed are
+shaded dark.
 
 ![](figure/lfd_testing.png)

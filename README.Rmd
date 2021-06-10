@@ -57,7 +57,7 @@ Documentation for the `estimate_min_specificity` function, which is used to esti
 
 ### Latest LFD positive prevalence
 
-Updated on: `r lubridate::today()`
+Updated on: `r lubridate::today()`. Periods during which schools were closed are shaded dark.
 
 ```{r lfd_tesing, echo = FALSE}
 suppressWarnings(suppressMessages(source(here::here("inst", "scripts", "lfd.r"))))
