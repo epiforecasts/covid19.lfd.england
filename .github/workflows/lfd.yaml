@@ -27,9 +27,8 @@ jobs:
         git config user.email "action@github.com"
         git config user.name "GitHub Action - LFD"
         git add --all
-        git commit -m "LFD - weekly"
+        git diff-index --quiet HEAD || git commit -m "LFD - weekly"
         git push
-        echo "pushed to github"
 
       env:
         AUTH: ${{secrets.API_TOKEN_GITHUB}}
