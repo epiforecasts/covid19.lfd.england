@@ -1,4 +1,4 @@
-name: "LDF"
+name: "LFD"
 on:
   workflow_dispatch:
   schedule:
