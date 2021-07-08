@@ -1,0 +1,35 @@
+name: "LDF"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 11,17,23 * * 4"
+
+jobs:
+  get_lfd:
+    runs-on: ubuntu-20.04
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+    steps:
+    - uses: actions/checkout@master
+    - uses: r-lib/actions/setup-r@v1
+
+    - name: Install system dependencies
+      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+
+    - name: Install R dependencies
+      run: Rscript -e 'install.packages(c("readODS", "here", "dplyr", "janitor", "tidyr", "ggplot2", "scales", "binom", "lubridate", "rvest"))'
+
+    - name: Obtain and plot LFD testing data
+      run: Rscript 'inst/scripts/lfd_education.r'
+
+    - name: Commit files
+      run: |
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action - LFD"
+        git add --all
+        git commit -m "LFD - weekly"
+        git push
+        echo "pushed to github"
+
+      env:
+        AUTH: ${{secrets.API_TOKEN_GITHUB}}

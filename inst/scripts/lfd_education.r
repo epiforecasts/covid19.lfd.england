@@ -7,9 +7,7 @@ library("ggplot2")
 library("scales")
 library("binom")
 library("lubridate")
-library("covidregionaldata")
 library("rvest")
-library("covid19.lfd.education")
 
 url <- paste0("https://www.gov.uk/government/collections/",
               "nhs-test-and-trace-statistics-england-weekly-reports")
@@ -122,8 +120,6 @@ p_testing <- ggplot(dfb,
   geom_rect(xmin = as.Date("2021-05-29"), xmax = as.Date("2021-06-06"),
             ymin = 0, ymax = max(dfb$upper), alpha = 0.008, fill = "black",
             colour = NA)
-
-
 
 suppressWarnings(dir.create(here::here("figure")))
 ggsave(here::here("figure", "lfd_testing.png"), p_testing, width = 10, height = 5)
