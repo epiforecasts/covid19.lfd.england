@@ -101,12 +101,11 @@ p_testing <- ggplot(dfb,
   geom_ribbon(alpha = 0.35) +
   scale_colour_brewer("", palette = "Dark2") +
   scale_fill_brewer("", palette = "Dark2") +
-  theme_minimal() +
+  theme_bw() +
   expand_limits(y = 0) +
   scale_y_continuous("Proportion positive", labels = scales::percent) +
   xlab("Final Wednesday of week of data") +
-  theme(legend.position = "bottom",
-        plot.background = element_rect(fill = "white")) +
+  theme(legend.position = "bottom") +
   geom_vline(xintercept = as.Date("2021-03-08"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2021-03-31"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2021-04-19"), linetype = "dashed") +

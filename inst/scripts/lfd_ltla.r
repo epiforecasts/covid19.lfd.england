@@ -86,7 +86,7 @@ inc_r <- df %>%
                          ltla_name, NA_character_))
 
 latest <- inc_r %>%
-  filter(date >= max(date) - 7) %>%
+  filter(date > max(date) - 7) %>%
   mutate(label = if_else(ratio > 2 | mean > 0.01,
                          ltla_name, NA_character_))
 
@@ -95,16 +95,15 @@ p <- ggplot(latest, aes(y = mean, x = ratio, colour = region_name)) +
   geom_errorbarh(alpha = 0.15, aes(xmin = lower_ratio, xmax = upper_ratio)) +
   geom_errorbar(alpha = 0.15, aes(ymin = lower, ymax = upper)) +
   geom_text_repel(aes(label = label), show.legend = FALSE) +
-  ylab("Prevalence") +
+  scale_y_continuous("LFD positive prevalence", labels = scales::percent_format(.5)) +
   xlab("Weekly relative growth") +
-  theme_minimal() +
+  theme_bw() +
   coord_cartesian(xlim = c(0, ceiling(max(latest$ratio)) + 1)) +
   geom_vline(xintercept = 1, linetype = "dashed") +
-  scale_color_brewer("Region", palette = "Paired") +
-  facet_wrap(~ date, nrow = 1)
+  scale_color_brewer("Region", palette = "Paired")
 
 suppressWarnings(dir.create(here::here("figure")))
-ggsave(here::here("figure", "lfd_prev_growth.pdf"), p, width = 6, height = 4)
+ggsave(here::here("figure", "lfd_prev_growth.pdf"), p, width = 11, height = 7)
 
 labels <- inc_r %>%
   filter(date == max(date)) %>%
@@ -114,7 +113,7 @@ labels <- inc_r %>%
 
 last_5_weeks <- inc_r %>%
   filter(date > max(date) - 7 * 5) %>%
-  mutate(label = if_else(ltla %in% highest & date == max(date),
+  mutate(label = if_else(ltla %in% labels$ltla & date == max(date),
                          ltla_name, NA_character_))
 
 p <- ggplot(last_5_weeks, aes(x = date, y = mean,
@@ -123,9 +122,9 @@ p <- ggplot(last_5_weeks, aes(x = date, y = mean,
   geom_point() +
   geom_line(colour = "black", alpha = 0.2) +
   scale_colour_brewer("", palette = "Set1") +
-  theme_minimal() +
+  theme_bw() +
   xlab("") +
-  expand_limits(x = max(last_4_weeks$date + 7)) +
+  expand_limits(x = max(last_5_weeks$date + 7)) +
   scale_y_continuous("LFD prevalence", labels = scales::label_percent()) +
   theme(legend.position = "bottom") +
   geom_text_repel(aes(label = label), show.legend = FALSE)
@@ -135,7 +134,7 @@ ggsave(here::here("figure", "lfd_last_5_weeks.pdf"), p, width = 10, height = 6)
 p <- ggplot(last_5_weeks, aes(x = mean)) +
   geom_histogram(binwidth = 0.001) +
   facet_grid(date ~ region_name) +
-  theme_minimal() +
+  theme_bw() +
   ylab("Numer of LTLAs") +
   scale_x_continuous("LFD prevalence", labels = scales::label_percent(0.5)) +
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
@@ -169,7 +168,7 @@ p_testing <- ggplot(df, aes(x = date, y = mean,
   geom_ribbon(alpha = 0.35) +
   scale_colour_brewer("", palette = "Dark2") +
   scale_fill_brewer("", palette = "Dark2") +
-  theme_minimal() +
+  theme_bw() +
   expand_limits(y = 0) +
   scale_y_continuous("Proportion positive", labels = scales::percent) +
   facet_wrap(~ltla_name) +
