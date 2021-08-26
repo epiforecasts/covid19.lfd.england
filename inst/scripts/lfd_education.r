@@ -32,7 +32,7 @@ dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
 ed_settings <- read_ods(file.path(dir, filename),
-                        sheet = "Table_7", skip = 2) %>%
+                        sheet = "Table_7", skip = 4) %>%
   clean_names() %>%
   slice(1:20) %>%
   rename(name = x) %>%
