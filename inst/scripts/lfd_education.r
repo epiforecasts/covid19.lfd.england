@@ -32,7 +32,7 @@ dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
 ed_settings <- read_ods(file.path(dir, filename),
-                        sheet = "Table_7", skip = 4) %>%
+                        sheet = "Table_7", skip = 2) %>%
   clean_names() %>%
   slice(1:20) %>%
   rename(name = x) %>%
@@ -83,7 +83,8 @@ schools <- read_ods(file.path(dir, filename),
 
 df_all <- ed_settings %>%
   filter(school == "Higher Education") %>%
-  bind_rows(schools)
+  bind_rows(schools) %>%
+  filter(!is.na(total))
 
 uncert <- binom.confint(df_all$positive, df_all$total, method = "exact") %>%
   select(mean, lower, upper)
