@@ -112,15 +112,21 @@ p_testing <- ggplot(dfb,
   geom_vline(xintercept = as.Date("2021-04-19"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2021-05-29"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2021-06-06"), linetype = "dashed") +
+  geom_vline(xintercept = as.Date("2021-07-23"), linetype = "dashed") +
+  geom_vline(xintercept = as.Date("2021-09-01"), linetype = "dashed") +
   geom_rect(xmin = min(dfb$date), xmax = as.Date("2021-03-08"),
-            ymin = 0, ymax = max(dfb$upper), fill = alpha("black", 0.008),
+            ymin = 0, ymax = max(dfb$upper), fill = alpha("black", 0.002),
             colour = NA) +
   geom_rect(xmin = as.Date("2021-03-31"), xmax = as.Date("2021-04-19"),
-            ymin = 0, ymax = max(dfb$upper), alpha = 0.008, fill = "black",
+            ymin = 0, ymax = max(dfb$upper), alpha = 0.002, fill = "black",
             colour = NA) +
   geom_rect(xmin = as.Date("2021-05-29"), xmax = as.Date("2021-06-06"),
-            ymin = 0, ymax = max(dfb$upper), alpha = 0.008, fill = "black",
+            ymin = 0, ymax = max(dfb$upper), alpha = 0.002, fill = "black",
+            colour = NA) +
+  geom_rect(xmin = as.Date("2021-07-23"), xmax = as.Date("2021-09-01"),
+            ymin = 0, ymax = max(dfb$upper), alpha = 0.002, fill = "black",
             colour = NA)
+
 
 suppressWarnings(dir.create(here::here("figure")))
 ggsave(here::here("figure", "lfd_testing.png"), p_testing, width = 10, height = 5)
