@@ -35,7 +35,7 @@ ed_settings <- read_ods(file.path(dir, filename),
                         sheet = "Table_7", skip = 2) %>%
   clean_names() %>%
   slice(1:20) %>%
-  rename(name = x) %>%
+  rename(name = lfd_testing_in_education) %>%
   select(-total) %>%
   mutate_if(is.numeric, as.character) %>%
   mutate(test = sub("Total number of (positive|negative) LFD tests", "\\1",
@@ -59,7 +59,7 @@ ed_settings <- read_ods(file.path(dir, filename),
 schools <- read_ods(file.path(dir, filename),
                         sheet = "Table_8", skip = 2) %>%
   clean_names() %>%
-  rename(name = x) %>%
+  rename(name = lfd_testing_in_education_by_role) %>%
   select(-total) %>%
   mutate_if(is.numeric, as.character) %>%
   mutate(test = sub("Total number of (positive|negative) LFD tests", "\\1",
