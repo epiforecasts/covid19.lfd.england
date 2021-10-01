@@ -8,6 +8,7 @@ library("scales")
 library("binom")
 library("lubridate")
 library("rvest")
+library("purrr")
 
 url <- paste0("https://www.gov.uk/government/collections/",
               "nhs-test-and-trace-statistics-england-weekly-reports")
@@ -15,8 +16,9 @@ session <- session(url)
 
 weekly_url <- session %>%
   html_nodes(xpath = "//div/ul/li/a") %>%
-  purrr::pluck(1) %>%
-  html_attr("href")
+  html_attr("href") %>%
+  grep("weekly-statistics", ., value = TRUE) %>%
+  pluck(1)
 
 latest <- session %>%
   session_jump_to(weekly_url)
