@@ -15,6 +15,7 @@ library("gganimate")
 library("gifski")
 library("covid19.nhs.data")
 library("viridis")
+library("purrr")
 
 url <- paste0("https://www.gov.uk/government/collections/",
               "nhs-test-and-trace-statistics-england-weekly-reports")
@@ -22,8 +23,9 @@ session <- session(url)
 
 weekly_url <- session %>%
   html_nodes(xpath = "//div/ul/li/a") %>%
-  purrr::pluck(1) %>%
-  html_attr("href")
+  html_attr("href") %>%
+  grep("weekly-statistics", ., value = TRUE) %>%
+  pluck(1)
 
 latest <- session %>%
   session_jump_to(weekly_url)
@@ -31,7 +33,7 @@ latest <- session %>%
 url <- latest %>%
   html_nodes(xpath = "//div/h3/a") %>%
   html_attr("href") %>%
-  grep(pattern = "tests_conducted", value = TRUE)
+  grep(pattern = "tests.conducted", value = TRUE)
 
 filename <- sub("^.*/([^/]+)$", "\\1", url)
 
@@ -39,7 +41,7 @@ dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
 ltlas <- read_ods(file.path(dir, filename),
-                  sheet = "Table_5", skip = 6) %>%
+                  sheet = "Table_5", skip = 2) %>%
   as_tibble() %>%
   clean_names() %>%
   select(-total) %>%
@@ -124,7 +126,7 @@ p <- ggplot(last_5_weeks, aes(x = date, y = mean,
   scale_colour_brewer("", palette = "Set1") +
   theme_bw() +
   xlab("") +
-  expand_limits(x = max(last_5_weeks$date + 7)) +
+  expand_limits(x = max(last_5_weeks$date + 7), y = 0) +
   scale_y_continuous("LFD prevalence", labels = scales::label_percent()) +
   theme(legend.position = "bottom") +
   geom_text_repel(aes(label = label), show.legend = FALSE)
