@@ -38,7 +38,7 @@ dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
 ltlas <- read_ods(file.path(dir, filename),
-                  sheet = "Table_5", skip = 2) %>%
+                  sheet = "Table_5", skip = 3) %>%
   as_tibble() %>%
   clean_names() %>%
   select(-total) %>%
@@ -110,27 +110,27 @@ labels <- inc_r %>%
   head(n = 20) %>%
   mutate(date = date + 2)
 
-last_5_weeks <- inc_r %>%
-  filter(date > max(date) - 7 * 5) %>%
+last_10_weeks <- inc_r %>%
+  filter(date > max(date) - weeks(10)) %>%
   mutate(label = if_else(ltla %in% labels$ltla & date == max(date),
                          ltla_name, NA_character_))
 
-p <- ggplot(last_5_weeks, aes(x = date, y = mean,
-                              colour = region_name,
-                              group = ltla)) +
+p <- ggplot(last_10_weeks, aes(x = date, y = mean,
+                               colour = region_name,
+                               group = ltla)) +
   geom_point() +
   geom_line(colour = "black", alpha = 0.2) +
   scale_colour_brewer("", palette = "Set1") +
   theme_bw() +
   xlab("") +
-  expand_limits(x = max(last_5_weeks$date + 7), y = 0) +
+  expand_limits(x = max(last_10_weeks$date + 7), y = 0) +
   scale_y_continuous("LFD prevalence", labels = scales::label_percent()) +
   theme(legend.position = "bottom") +
   geom_text_repel(aes(label = label), show.legend = FALSE)
 
-ggsave(here::here("figure", "lfd_last_5_weeks.pdf"), p, width = 10, height = 6)
+ggsave(here::here("figure", "lfd_last_10_weeks.pdf"), p, width = 10, height = 6)
 
-p <- ggplot(last_5_weeks, aes(x = mean)) +
+p <- ggplot(last_10_weeks, aes(x = mean)) +
   geom_histogram(binwidth = 0.001) +
   facet_grid(date ~ region_name) +
   theme_bw() +
@@ -138,18 +138,18 @@ p <- ggplot(last_5_weeks, aes(x = mean)) +
   scale_x_continuous("LFD prevalence", labels = scales::label_percent(0.5)) +
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
 
-ggsave(here::here("figure", "lfd_last_5_weeks_hist.pdf"), p, width = 10, height = 6)
+ggsave(here::here("figure", "lfd_last_10_weeks_hist.pdf"), p, width = 10, height = 6)
 
 all_ltlas_dates <-
   expand_grid(ltla = unique(england_ltla_shape$geo_code),
-              date = unique(last_5_weeks$date))
+              date = unique(last_10_weeks$date))
 
-last_5_weeks_all <- last_5_weeks %>%
+last_10_weeks_all <- last_10_weeks %>%
   right_join(all_ltlas_dates, by = c("ltla", "date")) %>%
   replace_na(list(mean = 0))
 
 map <- england_ltla_shape %>%
-  inner_join(last_5_weeks_all %>%
+  inner_join(last_10_weeks_all %>%
             rename(geo_code = ltla), by = "geo_code")
 
 p <- ggplot(map, aes(x = LAT, y = LONG, fill = mean)) +
@@ -158,7 +158,7 @@ p <- ggplot(map, aes(x = LAT, y = LONG, fill = mean)) +
   scale_fill_viridis("LFD prevalence", labels = scales::label_percent()) +
   facet_wrap( ~ date, nrow = 1)
 
-ggsave(here::here("figure", "lfd_last_5_weeks_maps.pdf"), p, width = 12, height = 4)
+ggsave(here::here("figure", "lfd_last_10_weeks_maps.pdf"), p, width = 12, height = 4)
 
 p_testing <- ggplot(df, aes(x = date, y = mean,
                         ymin = lower, ymax = upper)) +
