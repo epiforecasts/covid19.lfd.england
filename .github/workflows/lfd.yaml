@@ -17,10 +17,15 @@ jobs:
       run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
 
     - name: Install R dependencies
-      run: Rscript -e 'install.packages(c("readODS", "here", "dplyr", "janitor", "tidyr", "ggplot2", "scales", "binom", "lubridate", "rvest"))'
+      run: |
+        Rscript -e 'install.packages(c("readODS", "here", "dplyr", "janitor", "tidyr", "ggplot2", "scales", "binom", "lubridate", "rvest", "ggrepel", "viridis", "purrr", "devtools"))'
+        Rscript -e 'devtools::install()'
+        Rscript -e 'devtools::install_github("epiforecasts/covid19.nhs.data")'
 
     - name: Obtain and plot LFD testing data
-      run: Rscript 'inst/scripts/lfd_education.r'
+      run: |
+        Rscript 'inst/scripts/lfd_education.r'
+        Rscript 'inst/scripts/lfd_ltla.r'
 
     - name: Commit files
       run: |
