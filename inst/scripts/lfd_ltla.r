@@ -130,16 +130,6 @@ p <- ggplot(last_10_weeks, aes(x = date, y = mean,
 
 ggsave(here::here("figure", "lfd_last_10_weeks.pdf"), p, width = 10, height = 6)
 
-p <- ggplot(last_10_weeks, aes(x = mean)) +
-  geom_histogram(binwidth = 0.001) +
-  facet_grid(date ~ region_name) +
-  theme_bw() +
-  ylab("Numer of LTLAs") +
-  scale_x_continuous("LFD prevalence", labels = scales::label_percent(0.5)) +
-  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
-
-ggsave(here::here("figure", "lfd_last_10_weeks_hist.pdf"), p, width = 10, height = 6)
-
 all_ltlas_dates <-
   expand_grid(ltla = unique(england_ltla_shape$geo_code),
               date = unique(last_10_weeks$date))
