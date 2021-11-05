@@ -130,7 +130,23 @@ p <- ggplot(last_10_weeks, aes(x = date, y = mean,
 
 ggsave(here::here("figure", "lfd_last_10_weeks.pdf"), p, width = 10, height = 6)
 
-all_ltlas_dates <-
+p <- ggplot(last_10_weeks, aes(x = date, y = mean,
+                               colour = region_name,
+                               group = ltla)) +
+  geom_point() +
+  geom_line(colour = "black", alpha = 0.2) +
+  scale_colour_brewer("", palette = "Set1") +
+  theme_bw() +
+  xlab("") +
+  expand_limits(x = max(last_10_weeks$date + 7), y = 0) +
+  scale_y_continuous("LFD prevalence", labels = scales::label_percent()) +
+  theme(legend.position = "bottom") +
+  geom_text_repel(aes(label = label), show.legend = FALSE) +
+  facet_wrap(~ region_name)
+
+ggsave(here::here("figure", "lfd_last_10_weeks_regions.pdf"), p, width = 12, height = 10)
+
+aall_ltlas_dates <-
   expand_grid(ltla = unique(england_ltla_shape$geo_code),
               date = unique(last_10_weeks$date))
 
