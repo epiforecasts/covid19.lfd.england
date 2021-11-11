@@ -19,7 +19,7 @@ jobs:
 
     - name: Install R dependencies
       run: |
-        install.packages(c("readODS", "here", "dplyr", "janitor", "tidyr", "ggplot2", "scales", "binom", "lubridate", "rvest", "ggrepel", "viridis", "purrr", "devtools"))
+        install.packages(c("readODS", "here", "dplyr", "janitor", "tidyr", "ggplot2", "scales", "binom", "lubridate", "rvest", "ggrepel", "viridis", "purrr", "devtools", "svglite"))
         devtools::install()
         devtools::install_github("epiforecasts/covid19.nhs.data")
       shell: Rscript {0}
