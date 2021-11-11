@@ -40,3 +40,7 @@ vignettes/*.pdf
 
 # MacOS
 .DS_Store
+
+# CIS data
+data/cis*.rds
+data/cis/
