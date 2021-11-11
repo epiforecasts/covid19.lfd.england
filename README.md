@@ -53,4 +53,4 @@ to estimate the lower bound of specificity, can be found using
 
 Periods during which schools were closed are shaded dark.
 
-![](figure/lfd_testing.png)
+![](figure/lfd_testing.svg)
