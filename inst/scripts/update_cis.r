@@ -48,9 +48,6 @@ if (nrow(df_dl) > 0) {
   if (any(df_dl$ret != 0)) warning("Some downloads failed")
 }
 
-## define levels to extract
-levels <- c("national", "regional", "local")
-
 ## define geography codes not in data
 geography_codes <- c(England = "E92000001",
                      `North East` = "E12000001",
@@ -63,8 +60,9 @@ geography_codes <- c(England = "E92000001",
                      `South East` = "E12000008",
                      `South West` = "E12000009")
 
-## define table structure
-columns <- c(national = 4, regional = 5, local = 6)
+## define levels to extract and table structure
+columns <- c(national = 4, regional = 5, local = 6, age_school = 5)
+super_headers <- c(regional = "region", age_school = "lower_age_limit")
 
 ## list all files
 files <- list.files(here::here("data", "cis"), full.names = TRUE)
@@ -76,27 +74,33 @@ if (file.exists(list_file) && setequal(files, readRDS(list_file))) {
 
 ## manual override for problematic spreadsheet (wrong table label in contents)
 override <- list(`covid19infectionsurveydatasets20210305v2.xlsx` =
-                   list(`1k` = "1l"))
+                   list(`1k` = "1l",
+                        `1h` = "1i"))
 
 ## construct list of data frames with positivity
 positivity <- list()
-for (level in levels) {
+for (level in names(columns)) {
   positivity[[level]] <- lapply(files, function(x) {
     ## first,  get table of contents sheet to work out which sheet we want
     contents_sheet <- read_excel(x, sheet = "Contents") %>%
       clean_names()
     if (level == "national") {
       contents_sheet <- contents_sheet %>%
-        filter(grepl("^Table", contents)) %>%
+        filter(grepl("14", contents)) %>%
         head(n = 1)
     } else if (level == "regional") {
       contents_sheet <- contents_sheet %>%
         filter(grepl(" [Rr]egions?$", contents),
-               !grepl("daily", contents),
-               !grepl("14", contents))
+               grepl("14", contents)) %>%
+        head(n = 1)
     } else if (level == "local") {
       contents_sheet <- contents_sheet %>%
         filter(grepl("CIS sub-region", contents)) %>%
+        head(n = 1)
+    } else if (level == "age_school") {
+      contents_sheet <- contents_sheet %>%
+        filter(grepl("14", contents),
+               grepl("age/school year", contents)) %>%
         head(n = 1)
     } else {
       stop("Unknown level: ", level)
@@ -112,37 +116,64 @@ for (level in levels) {
       ## we found the sheet, now we get a preview so we can work out where in
       ## the sheet the actual table is
       preview <- read_excel(x, sheet = sheet) %>%
+        remove_empty("cols") %>%
         clean_names()
-      if (level %in% c("national", "regional")) {
-        skip <- min(which(!is.na(preview$x2)))
-      } else {
-        skip <- which(preview$contents == "Geography Code")
-      }
-      ## work out the date of the survey
-      if (level == "regional") {
-        date_raw <- preview$contents[skip - 1]
-        if (grepl("^[0-9]+$", date_raw)) {
-          date <- as.Date(as.integer(date_raw), origin = "1899-12-30")
-        } else {
-          date <- dmy(date_raw)
+      if (level %in% c("national", "regional", "age_school")) {
+        headers_row <- min(grep("(%|[Nn]umber)", unlist(preview[, 2]))) - 1
+        skip <- headers_row + 1 ##if_else(level %in% c("regional", "age_school"), 1, 0)
+        if (level %in% c("regional", "age_school")) {
+          headers <- preview[headers_row, 2:ncol(preview)] %>%
+            t() %>%
+            as_tibble(.name_repair = "minimal") %>%
+            rename(header = 1) %>%
+            fill(header)
+          if (level == "age_school") {
+            headers <- headers %>%
+              mutate(header = sub("^Age ([0-9]+).* - Age ([0-9]+).*$", "\\1|\\2", header),
+                     header = sub("^Age ([0-9]+)\\+", "\\1|", header)) %>%
+              separate(header, c("from", "to"), sep = "\\|")
+          }
         }
-      } else {
+      } else if (level == "local") {
+        skip <- which(preview$contents == "Geography Code")
+        ## work out the date of the survey
         date_end <- dmy(sub("^.* to ", "", preview$contents[3]))
+        date_start <- date_end - 6
       }
       ## having figured out where the table is and extracted the date, read the table
+      if (is.infinite(skip)) return(NULL) ## couldn't find data 
       data <- read_excel(x, sheet = sheet, skip = skip) %>%
+        remove_empty("cols") %>%
         clean_names()
-      if (level == "national") {
-        if (colnames(data)[1] != "time_period") return(NULL) ## old estimates,  not needed
+      if (level %in% c("national", "regional", "age_school")) {
+        if (level == "national" && colnames(data)[1] != "time_period") return(NULL) ## old estimates, not needed
+       colnames(data) <-
+          c("time_period", sub("(estimated_)?(.+)_[0-9]+$", "\\2", colnames(data)[2:ncol(data)]))
+        if (level == c("regional")) {
+          colnames(data)[2:ncol(data)] <-
+            paste(colnames(data)[2:ncol(data)], headers$header, sep = "|")
+        } else if (level == "age_school") {
+          colnames(data)[2:ncol(data)] <-
+            paste(colnames(data)[2:ncol(data)], headers$from, sep = "|")
+        }
+        data <- data[, !duplicated(colnames(data))]
         data <- data %>%
-          slice(-1) %>%
-          mutate(region = "England")
-      } else if (level == "regional") {
-        ## rename column
+          filter(!is.na(time_period)) %>%
+          mutate_at(2:ncol(.), as.numeric) %>%
+          pivot_longer(2:ncol(.))
+        if (level %in% names(super_headers)) {
+          data <- data %>%
+            separate(name, c("name", super_headers[level]), sep = "\\|")
+        }
         data <- data %>%
-          rename(region = 1) %>%
-          filter(!is.na(region))
-      } else {
+          mutate(name = sub("covid_19", "covid", name)) %>% ## sometimes _19 gets removed by colnames manipulation above
+          pivot_wider() %>%
+          filter(!is.na(percent_testing_positive_for_covid))
+        if (level == "age_scohol") {
+          data <- data %>%
+            mutate(lower_age_limit = as.integer(lower_age_limit))
+        }
+      } else if (level == "local") {
         data <- data %>%
           filter(!is.na(geography_code),
                  !is.na(region))
@@ -153,20 +184,42 @@ for (level in levels) {
                percentage_pos_low_95 = columns[[level]] - 1,
                percentage_pos_high_95 = columns[[level]]) %>%
         mutate_at(vars(starts_with("percentage")), as.numeric) %>%
-        filter(!is.na(percentage_pos))
-      if (level == c("national")) {
+        filter(!is.na(percentage_pos)) %>%
+        pivot_longer(starts_with("percentage")) %>%
+        replace_na(list(value = 0)) %>%
+        pivot_wider()
+      if (level %in% c("national", "regional", "age_school")) {
         data <- data %>%
-          mutate(week_end = dmy(sub("^.* to ", "", time_period)),
-                 region = "England") %>%
+          mutate(end_date = dmy(sub("^.* to ", "", time_period)),
+                 start_date = end_date - 13) %>%
           select(-time_period)
-      } else if (level == "regional") {
+        if (level %in% c("national", "age_school")) {
+          data <- data %>%
+            mutate(region = NA_character_,
+                   geography = "England")
+        } else if (level == "regional") {
+          data <- data %>%
+            mutate(geography = region)
+        }
         data <- data %>%
-          mutate(week_end = floor_date(date, "week", 1) + 6)
-      } else if (level == "local"){
-       data <- data %>%
-         mutate(week_end = date_end)
-       }
-      return(data %>%
+          mutate(geography_code = geography_codes[geography])
+      } else if (level == "local") {
+        data <- data %>%
+          rename(geography = local_authority_areas) %>%
+          mutate(start_date = date_start,
+                 end_date = date_end)
+      }
+      if (level == "age_school") {
+        data <- data %>%
+          mutate(lower_age_limit = as.integer(lower_age_limit)) %>%
+          select(start_date, end_date, geography, geography_code,
+                 lower_age_limit, starts_with("percentage"))
+      } else {
+        data <- data %>%
+          select(start_date, end_date, geography, geography_code,
+                 region, starts_with("percentage"))
+      }
+     return(data %>%
              mutate(file_name = x))
     } else {
       return(NULL)
@@ -178,29 +231,25 @@ for (level in levels) {
     mutate(level = level)
 }
 
-## get latest national data
-positivity$national <- positivity$national %>%
-  filter(!is.na(week_end)) %>%
-  group_by(file_name) %>%
-  mutate(max_date = max(week_end)) %>%
-  ungroup() %>%
-  filter(max_date == max(max_date)) %>%
-  select(-max_date)
+## get latest data
+for (level in c("national", "regional", "age_school")) {
+  positivity[[level]] <- positivity[[level]] %>%
+    filter(!is.na(start_date)) %>%
+    group_by(file_name) %>%
+    mutate(max_date = max(start_date)) %>%
+    ungroup() %>%
+    filter(max_date == max(max_date)) %>%
+    select(-max_date)
+}
 
 ## combine it all into one data frame
-combined <- positivity %>%
+combined <- positivity[c("national", "regional", "local")] %>%
   bind_rows( ) %>%
-  select(-file_name) %>%
-  mutate(geography_code =
-           if_else(is.na(geography_code), geography_codes[region],
-                   geography_code), 
-         region = sub("the Humber", "The Humber", region),
-         geography = if_else(level == "local", local_authority_areas, region),
-         region = if_else(level == "national", NA_character_, region)) %>%
-  select(level, geography, geography_code, region, week_end, starts_with("percentage_"))
+  select(-file_name)
 
 ## save
 saveRDS(combined, here::here("data", "cis.rds"))
+saveRDS(positivity[["age_school"]], here::here("data", "cis_age.rds"))
 
 ## save area mapping, correcting for LAD21 changes
 areas <- combined %>%
@@ -238,5 +287,4 @@ areas <- combined %>%
 
 ## save
 saveRDS(areas, here::here("data", "cis_areas.rds"))
-
 saveRDS(files, list_file)
