@@ -146,7 +146,7 @@ p <- ggplot(last_10_weeks, aes(x = date, y = mean,
 
 ggsave(here::here("figure", "lfd_last_10_weeks_regions.pdf"), p, width = 12, height = 10)
 
-aall_ltlas_dates <-
+all_ltlas_dates <-
   expand_grid(ltla = unique(england_ltla_shape$geo_code),
               date = unique(last_10_weeks$date))
 
@@ -180,4 +180,3 @@ p_testing <- ggplot(df, aes(x = date, y = mean,
   xlab("Final Wednesday of week of data")
 
 ggsave(here::here("figure", "lfd_ltla.pdf"), p_testing, width = 25, height = 25)
-
