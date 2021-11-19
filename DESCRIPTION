@@ -17,8 +17,7 @@ Depends:
     ggplot2,
     scales,
     binom,
-    lubridate,
-    covidregionaldata
+    lubridate
 License: MIT
 ByteCompile: true
 Encoding: UTF-8
