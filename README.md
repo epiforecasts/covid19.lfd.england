@@ -15,17 +15,7 @@ evidence of high test specificity*. Available at
 
 ### How to download or install
 
-The code depends on the `covidregionaldata` package, which can be
-installed using
-
-``` r
-# install.packages("drat")
-library("drat")
-drat:::add("epiforecasts")
-install.packages("covidregionaldata")
-```
-
-The code itself is installed as an R package, `covid19.lfd.education`,
+The code is installed as an R package, `covid19.lfd.education`,
 from GitHub with:
 
 ``` r
