@@ -17,7 +17,10 @@ Depends:
     ggplot2,
     scales,
     binom,
-    lubridate
+    lubridate,
+    covid19.nhs.data
+Remotes:
+    epiforecasts/covid19.nhs.data
 License: MIT
 ByteCompile: true
 Encoding: UTF-8
