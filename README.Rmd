@@ -21,16 +21,7 @@ Funk S, Flasche S,  _`r Title`_. Available at <https://cmmid.github.io/topics/co
 
 ### How to download or install
 
-The code depends on the `covidregionaldata` package, which can be installed using
-
-```{r covidregionaldata-install, eval = FALSE}
-# install.packages("drat")
-library("drat")
-drat:::add("epiforecasts")
-install.packages("covidregionaldata")
-```
-
-The code itself is installed as an R package, `covid19.lfd.education`, from GitHub with:
+The code is installed as an R package, `covid19.lfd.education`, from GitHub with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
