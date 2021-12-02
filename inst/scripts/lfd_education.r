@@ -34,7 +34,7 @@ dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
 ed_settings <- read_ods(file.path(dir, filename),
-                        sheet = "Table_7", skip = 2) %>%
+                        sheet = "Table_7", skip = 3) %>%
   clean_names() %>%
   slice(1:20) %>%
   rename(name = lfd_testing_in_education) %>%
@@ -59,7 +59,7 @@ ed_settings <- read_ods(file.path(dir, filename),
   mutate(total = positive + negative)
 
 schools <- read_ods(file.path(dir, filename),
-                        sheet = "Table_8", skip = 2) %>%
+                        sheet = "Table_8", skip = 3) %>%
   clean_names() %>%
   rename(name = lfd_testing_in_education_by_role) %>%
   select(-total) %>%

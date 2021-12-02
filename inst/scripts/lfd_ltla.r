@@ -37,7 +37,7 @@ dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
 ltlas <- read_ods(file.path(dir, filename),
-                  sheet = "Table_5", skip = 2) %>%
+                  sheet = "Table_5", skip = 3) %>%
   as_tibble() %>%
   clean_names() %>%
   select(-total) %>%
