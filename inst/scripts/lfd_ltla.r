@@ -101,7 +101,7 @@ p <- ggplot(latest, aes(y = mean, x = ratio, colour = region_name)) +
   scale_color_brewer("Region", palette = "Paired")
 
 suppressWarnings(dir.create(here::here("figure")))
-ggsave(here::here("figure", "lfd_prev_growth.pdf"), p, width = 11, height = 7)
+ggsave(here::here("figure", "lfd_prev_growth.svg"), p, width = 11, height = 7)
 
 labels <- inc_r %>%
   filter(date == max(date)) %>%
@@ -127,7 +127,7 @@ p <- ggplot(last_10_weeks, aes(x = date, y = mean,
   theme(legend.position = "bottom") +
   geom_text_repel(aes(label = label), show.legend = FALSE)
 
-ggsave(here::here("figure", "lfd_last_10_weeks.pdf"), p, width = 10, height = 6)
+ggsave(here::here("figure", "lfd_last_10_weeks.svg"), p, width = 10, height = 6)
 
 p <- ggplot(last_10_weeks, aes(x = date, y = mean,
                                colour = region_name,
@@ -143,7 +143,7 @@ p <- ggplot(last_10_weeks, aes(x = date, y = mean,
   geom_text_repel(aes(label = label), show.legend = FALSE) +
   facet_wrap(~ region_name)
 
-ggsave(here::here("figure", "lfd_last_10_weeks_regions.pdf"), p, width = 12, height = 10)
+ggsave(here::here("figure", "lfd_last_10_weeks_regions.svg"), p, width = 12, height = 10)
 
 all_ltlas_dates <-
   expand_grid(ltla = unique(england_ltla_shape$geo_code),
@@ -163,7 +163,7 @@ p <- ggplot(map, aes(x = LAT, y = LONG, fill = mean)) +
   scale_fill_viridis("LFD prevalence", labels = scales::label_percent()) +
   facet_wrap( ~ date, nrow = 1)
 
-ggsave(here::here("figure", "lfd_last_10_weeks_maps.pdf"), p, width = 12, height = 4)
+ggsave(here::here("figure", "lfd_last_10_weeks_maps.svg"), p, width = 12, height = 4)
 
 p_testing <- ggplot(df, aes(x = date, y = mean,
                         ymin = lower, ymax = upper)) +
@@ -178,4 +178,4 @@ p_testing <- ggplot(df, aes(x = date, y = mean,
   facet_wrap(~ltla_name) +
   xlab("Final Wednesday of week of data")
 
-ggsave(here::here("figure", "lfd_ltla.pdf"), p_testing, width = 25, height = 25)
+ggsave(here::here("figure", "lfd_ltla.svg"), p_testing, width = 25, height = 25)
