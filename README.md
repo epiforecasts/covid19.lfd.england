@@ -27,7 +27,7 @@ To re-create the results, run the script in `inst/scripts/lfd_education.r`:
 
 ``` r
 source(system.file(package = "sars.cov.2.england.prevalence",
-                   file.path("inst", "scripts", "lfd_edcation.r")))
+                   file.path("scripts", "lfd_edcation.r")))
 res
 ```
 
@@ -35,7 +35,7 @@ To make changes, just create a copy of `lfd_education.r` locally and edit this:
 
 ``` r
 file.copy(system.file(package = "sars.cov.2.england.prevalence",
-                      file.path("inst", "scripts", "lfd_education.r"),
+                      file.path("scripts", "lfd_education.r"),
                       "my_code_dir/lfd_education.r"))
 ```
 

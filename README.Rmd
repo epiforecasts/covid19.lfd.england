@@ -32,7 +32,7 @@ To re-create the results, run the script in `inst/scripts/lfd.r`:
 
 ```{r lfd, eval = FALSE}
 source(system.file(package = "covid19.lfd.education",
-                   file.path("inst", "scripts", "lfd.r")))
+                   file.path("scripts", "lfd.r")))
 res
 ```
 
@@ -40,7 +40,7 @@ To make changes, just create a copy of `lfd.r` locally and edit this:
 
 ```{r lfd_copy, eval = FALSE}
 file.copy(system.file(package = "covid19.lfd.education",
-                      file.path("inst", "scripts", "lfd.r"),
+                      file.path("scripts", "lfd.r"),
                       "my_code_dir/lfd.r"))
 ```
 
