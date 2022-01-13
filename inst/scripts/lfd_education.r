@@ -118,6 +118,8 @@ p_testing <- ggplot(dfb,
   geom_vline(xintercept = as.Date("2021-09-01"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2021-10-23"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2021-10-31"), linetype = "dashed") +
+  geom_vline(xintercept = as.Date("2021-12-18"), linetype = "dashed") +
+  geom_vline(xintercept = as.Date("2022-01-04"), linetype = "dashed") +
   geom_rect(xmin = min(dfb$date), xmax = as.Date("2021-03-08"),
             ymin = 0, ymax = max(dfb$upper), fill = alpha("black", 0.002),
             colour = NA) +
@@ -131,6 +133,9 @@ p_testing <- ggplot(dfb,
             ymin = 0, ymax = max(dfb$upper), alpha = 0.002, fill = "black",
             colour = NA) +
   geom_rect(xmin = as.Date("2021-10-23"), xmax = as.Date("2021-10-31"),
+            ymin = 0, ymax = max(dfb$upper), alpha = 0.002, fill = "black",
+            colour = NA) +
+  geom_rect(xmin = as.Date("2021-12-18"), xmax = as.Date("2022-01-05"),
             ymin = 0, ymax = max(dfb$upper), alpha = 0.002, fill = "black",
             colour = NA)
 
