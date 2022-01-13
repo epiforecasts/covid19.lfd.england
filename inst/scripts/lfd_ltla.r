@@ -9,9 +9,9 @@ library("binom")
 library("lubridate")
 library("rvest")
 library("ggrepel")
-library("covid19.nhs.data")
 library("viridis")
 library("purrr")
+library("sf")
 
 url <- paste0("https://www.gov.uk/government/collections/",
               "nhs-test-and-trace-statistics-england-weekly-reports")
@@ -118,7 +118,7 @@ p <- ggplot(last_10_weeks, aes(x = date, y = mean,
                                colour = region_name,
                                group = ltla)) +
   geom_point() +
-  geom_line(colour = "black", alpha = 0.2) +
+  geom_line(alpha = 0.2) +
   scale_colour_brewer("", palette = "Set1") +
   theme_bw() +
   xlab("") +
@@ -144,6 +144,10 @@ p <- ggplot(last_10_weeks, aes(x = date, y = mean,
   facet_wrap(~ region_name)
 
 ggsave(here::here("figure", "lfd_last_10_weeks_regions.svg"), p, width = 12, height = 10)
+
+england_ltla_shape <- st_read(here::here("data", "Local_Authority_Districts_(December_2021)_UK_BUC")) %>%
+  rename(geo_code = LAD21CD) %>%
+  filter(grepl("^E", geo_code))
 
 all_ltlas_dates <-
   expand_grid(ltla = unique(england_ltla_shape$geo_code),

@@ -44,3 +44,7 @@ to estimate the lower bound of specificity, can be found using
 Periods during which schools were closed are shaded dark.
 
 ![](figure/lfd_testing.svg)
+
+# Copyright notice
+
+Contains shapefiles from the Office for National Statistics licensed under the Open Government Licence v.3.0. Contains OS data © Crown copyright and database right 2022.

@@ -51,3 +51,7 @@ Documentation for the `estimate_min_specificity` function, which is used to esti
 Periods during which schools were closed are shaded dark.
 
 ![](figure/lfd_testing.svg)
+
+# Copyright notice
+
+Contains shapefiles from the Office for National Statistics licensed under the Open Government Licence v.3.0. Contains OS data © Crown copyright and database right 2022.
