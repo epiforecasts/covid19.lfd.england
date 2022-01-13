@@ -164,6 +164,7 @@ map <- england_ltla_shape %>%
 p <- ggplot(map, aes(x = LAT, y = LONG, fill = mean)) +
   geom_sf(colour = NA) +
   theme_void() +
+  theme(panel.background = element_rect(fill = "white", colour = "white")) + 
   scale_fill_viridis("LFD prevalence", labels = scales::label_percent()) +
   facet_wrap( ~ date, nrow = 1)
 

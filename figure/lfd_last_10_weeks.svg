@@ -3417,11 +3417,11 @@
 <polyline points='74.03,278.71 135.03,291.26 196.03,276.55 257.03,270.55 318.02,258.33 379.02,254.43 440.02,187.56 501.02,166.97 562.02,100.52 623.02,118.22 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='74.03,288.73 135.03,291.71 196.03,276.08 257.03,263.78 318.02,268.60 379.02,265.82 440.02,156.62 501.02,155.33 562.02,135.92 623.02,148.18 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='74.03,300.88 135.03,295.35 196.03,291.60 257.03,277.40 318.02,285.50 379.02,273.05 440.02,177.78 501.02,149.87 562.02,117.47 623.02,133.29 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='592.95' y='17.02' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Arial;' textLength='50.27px' lengthAdjust='spacingAndGlyphs'>Hartlepool</text>
-<text x='664.34' y='32.57' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Arial;' textLength='72.35px' lengthAdjust='spacingAndGlyphs'>Middlesbrough</text>
-<text x='667.39' y='58.55' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Arial;' textLength='87.06px' lengthAdjust='spacingAndGlyphs'>Stockton-on-Tees</text>
-<text x='600.27' y='41.75' text-anchor='middle' style='font-size: 11.04px; fill: #FF7F00; font-family: Arial;' textLength='34.95px' lengthAdjust='spacingAndGlyphs'>Salford</text>
-<text x='592.42' y='56.86' text-anchor='middle' style='font-size: 11.04px; fill: #999999; font-family: Arial;' textLength='48.43px' lengthAdjust='spacingAndGlyphs'>Wakefield</text>
+<text x='653.19' y='16.99' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Arial;' textLength='50.27px' lengthAdjust='spacingAndGlyphs'>Hartlepool</text>
+<text x='581.73' y='29.87' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Arial;' textLength='72.35px' lengthAdjust='spacingAndGlyphs'>Middlesbrough</text>
+<text x='667.39' y='60.22' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Arial;' textLength='87.06px' lengthAdjust='spacingAndGlyphs'>Stockton-on-Tees</text>
+<text x='645.78' y='41.81' text-anchor='middle' style='font-size: 11.04px; fill: #FF7F00; font-family: Arial;' textLength='34.95px' lengthAdjust='spacingAndGlyphs'>Salford</text>
+<text x='593.58' y='45.10' text-anchor='middle' style='font-size: 11.04px; fill: #999999; font-family: Arial;' textLength='48.43px' lengthAdjust='spacingAndGlyphs'>Wakefield</text>
 <rect x='43.53' y='5.48' width='670.99' height='338.31' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0MzIuMDA=)'>

@@ -43,13 +43,13 @@ The code is installed as an R package, `covid19.lfd.education`, from GitHub with
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
-remotes::install_github("sbfnk/covid19.lfd.education")
+remotes::install_github("sbfnk/covid19.lfd.england")
 ```
 
 To re-create the results, run the script in `inst/scripts/lfd.r`:
 
 ```{r lfd, eval = FALSE}
-source(system.file(package = "covid19.lfd.education",
+source(system.file(package = "covid19.lfd.england",
                    file.path("scripts", "lfd.r")))
 res
 ```
@@ -57,7 +57,7 @@ res
 To make changes, just create a copy of `lfd.r` locally and edit this:
 
 ```{r lfd_copy, eval = FALSE}
-file.copy(system.file(package = "covid19.lfd.education",
+file.copy(system.file(package = "covid19.lfd.england",
                       file.path("scripts", "lfd.r"),
                       "my_code_dir/lfd.r"))
 ```
