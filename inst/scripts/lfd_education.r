@@ -34,7 +34,7 @@ dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
 ed_settings <- read_ods(file.path(dir, filename),
-                        sheet = "Table_7", skip = 3) %>%
+                        sheet = "Table_7", skip = 2) %>%
   clean_names() %>%
   slice(1:20) %>%
   rename(name = lfd_testing_in_education) %>%
@@ -59,7 +59,7 @@ ed_settings <- read_ods(file.path(dir, filename),
   mutate(total = positive + negative)
 
 schools <- read_ods(file.path(dir, filename),
-                        sheet = "Table_8", skip = 3) %>%
+                        sheet = "Table_8", skip = 2) %>%
   clean_names() %>%
   rename(name = lfd_testing_in_education_by_role) %>%
   select(-total) %>%
@@ -99,17 +99,7 @@ dfb <- df_all %>%
 p_testing <- ggplot(dfb,
                     aes(x = date, y = mean, colour = school,
                         ymin = lower, ymax = upper, fill = school)) +
-  geom_point() +
-  geom_line() +
-  geom_ribbon(alpha = 0.35) +
-  scale_colour_brewer("", palette = "Dark2") +
-  scale_fill_brewer("", palette = "Dark2") +
-  theme_bw() +
-  expand_limits(y = 0) +
-  scale_y_continuous("Proportion positive", labels = scales::percent) +
-  xlab("Final Wednesday of week of data") +
-  theme(legend.position = "bottom") +
-  geom_vline(xintercept = as.Date("2021-03-08"), linetype = "dashed") +
+ geom_vline(xintercept = as.Date("2021-03-08"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2021-03-31"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2021-04-19"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2021-05-29"), linetype = "dashed") +
@@ -121,23 +111,34 @@ p_testing <- ggplot(dfb,
   geom_vline(xintercept = as.Date("2021-12-18"), linetype = "dashed") +
   geom_vline(xintercept = as.Date("2022-01-04"), linetype = "dashed") +
   geom_rect(xmin = min(dfb$date), xmax = as.Date("2021-03-08"),
-            ymin = 0, ymax = max(dfb$upper), fill = alpha("black", 0.002),
+            ymin = 0, ymax = max(dfb$upper), fill = alpha("grey", 0.01),
             colour = NA) +
   geom_rect(xmin = as.Date("2021-03-31"), xmax = as.Date("2021-04-19"),
-            ymin = 0, ymax = max(dfb$upper), alpha = 0.002, fill = "black",
+            ymin = 0, ymax = max(dfb$upper), alpha = 0.01, fill = "grey",
             colour = NA) +
   geom_rect(xmin = as.Date("2021-05-29"), xmax = as.Date("2021-06-06"),
-            ymin = 0, ymax = max(dfb$upper), alpha = 0.002, fill = "black",
+            ymin = 0, ymax = max(dfb$upper), alpha = 0.01, fill = "grey",
             colour = NA) +
   geom_rect(xmin = as.Date("2021-07-23"), xmax = as.Date("2021-09-01"),
-            ymin = 0, ymax = max(dfb$upper), alpha = 0.002, fill = "black",
+            ymin = 0, ymax = max(dfb$upper), alpha = 0.01, fill = "grey",
             colour = NA) +
   geom_rect(xmin = as.Date("2021-10-23"), xmax = as.Date("2021-10-31"),
-            ymin = 0, ymax = max(dfb$upper), alpha = 0.002, fill = "black",
+            ymin = 0, ymax = max(dfb$upper), alpha = 0.01, fill = "grey",
             colour = NA) +
   geom_rect(xmin = as.Date("2021-12-18"), xmax = as.Date("2022-01-05"),
-            ymin = 0, ymax = max(dfb$upper), alpha = 0.002, fill = "black",
-            colour = NA)
+            ymin = 0, ymax = max(dfb$upper), alpha = 0.01, fill = "grey",
+            colour = NA) +
+  geom_point() +
+  geom_line() +
+  geom_ribbon(alpha = 0.35) +
+  scale_colour_brewer("", palette = "Dark2") +
+  scale_fill_brewer("", palette = "Dark2") +
+  theme_bw() +
+  expand_limits(y = 0) +
+  scale_y_continuous("Proportion positive", labels = scales::percent) +
+  xlab("Final Wednesday of week of data") +
+  theme(legend.position = "bottom")
 
 suppressWarnings(dir.create(here::here("figure")))
 ggsave(here::here("figure", "lfd_testing.svg"), p_testing, width = 10, height = 5)
+
