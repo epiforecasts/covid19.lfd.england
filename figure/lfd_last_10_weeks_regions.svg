@@ -425,7 +425,7 @@
 <polyline points='57.95,174.50 82.25,176.44 106.54,169.12 130.84,171.25 155.13,169.79 179.43,174.19 203.72,168.89 228.02,156.55 252.32,103.62 276.61,94.50 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='57.95,181.88 82.25,178.15 106.54,162.01 130.84,163.42 155.13,173.03 179.43,170.93 203.72,163.12 228.02,167.21 252.32,124.11 276.61,108.00 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='57.95,180.82 82.25,180.79 106.54,169.32 130.84,166.56 155.13,173.33 179.43,175.36 203.72,169.98 228.02,169.14 252.32,132.20 276.61,122.20 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='238.61' y='66.46' text-anchor='middle' style='font-size: 11.04px; fill: #E41A1C; font-family: Liberation Sans;' textLength='66.69px' lengthAdjust='spacingAndGlyphs'>Chesterfield</text>
+<text x='238.61' y='68.27' text-anchor='middle' style='font-size: 11.04px; fill: #E41A1C; font-family: Liberation Sans;' textLength='66.69px' lengthAdjust='spacingAndGlyphs'>Chesterfield</text>
 <rect x='45.80' y='22.49' width='267.25' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
@@ -582,11 +582,11 @@
 <polyline points='57.95,379.75 82.25,383.44 106.54,385.88 130.84,393.32 155.13,392.25 179.43,391.34 203.72,393.66 228.02,388.17 252.32,342.77 276.61,276.77 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='57.95,382.18 82.25,386.65 106.54,384.87 130.84,387.75 155.13,386.99 179.43,391.59 203.72,393.76 228.02,391.39 252.32,341.34 276.61,278.71 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='57.95,379.53 82.25,385.80 106.54,381.98 130.84,378.48 155.13,387.21 179.43,383.12 203.72,393.01 228.02,386.64 252.32,337.40 276.61,289.06 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<line x1='246.83' y1='249.08' x2='275.24' y2='248.47' style='stroke-width: 1.07; stroke: #984EA3;' />
+<line x1='246.78' y1='249.09' x2='275.24' y2='248.47' style='stroke-width: 1.07; stroke: #984EA3;' />
 <text x='280.79' y='244.74' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Liberation Sans;' textLength='57.33px' lengthAdjust='spacingAndGlyphs'>Hartlepool</text>
-<text x='204.43' y='253.10' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Liberation Sans;' textLength='81.20px' lengthAdjust='spacingAndGlyphs'>Middlesbrough</text>
+<text x='204.38' y='253.11' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Liberation Sans;' textLength='81.20px' lengthAdjust='spacingAndGlyphs'>Middlesbrough</text>
 <text x='249.07' y='285.20' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Liberation Sans;' textLength='120.77px' lengthAdjust='spacingAndGlyphs'>Redcar and Cleveland</text>
-<text x='225.39' y='268.35' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Liberation Sans;' textLength='93.66px' lengthAdjust='spacingAndGlyphs'>Stockton-on-Tees</text>
+<text x='225.24' y='268.36' text-anchor='middle' style='font-size: 11.04px; fill: #984EA3; font-family: Liberation Sans;' textLength='93.66px' lengthAdjust='spacingAndGlyphs'>Stockton-on-Tees</text>
 <rect x='45.80' y='233.10' width='267.25' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
@@ -2634,7 +2634,7 @@
 <polyline points='603.42,174.42 627.71,181.40 652.01,173.22 676.30,169.88 700.60,163.09 724.89,160.92 749.19,123.74 773.49,112.29 797.78,75.34 822.08,85.18 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='603.42,179.99 627.71,181.65 652.01,172.95 676.30,166.12 700.60,168.80 724.89,167.25 749.19,106.53 773.49,105.82 797.78,95.02 822.08,101.84 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='603.42,186.75 627.71,183.67 652.01,181.59 676.30,173.69 700.60,178.20 724.89,171.27 749.19,118.30 773.49,102.78 797.78,84.76 822.08,93.56 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='809.96' y='68.20' text-anchor='middle' style='font-size: 11.04px; fill: #4DAF4A; font-family: Liberation Sans;' textLength='48.56px' lengthAdjust='spacingAndGlyphs'>Newham</text>
+<text x='830.56' y='51.16' text-anchor='middle' style='font-size: 11.04px; fill: #4DAF4A; font-family: Liberation Sans;' textLength='48.56px' lengthAdjust='spacingAndGlyphs'>Newham</text>
 <rect x='591.27' y='22.49' width='267.25' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
@@ -3618,8 +3618,8 @@
 <polyline points='603.42,593.84 627.71,603.09 652.01,596.48 676.30,597.32 700.60,603.60 724.89,603.18 749.19,602.58 773.49,592.28 797.78,537.84 822.08,503.81 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='603.42,595.77 627.71,599.84 652.01,597.03 676.30,597.93 700.60,595.18 724.89,596.83 749.19,590.90 773.49,579.56 797.78,524.77 822.08,498.38 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='603.42,586.07 627.71,592.91 652.01,588.62 676.30,589.64 700.60,591.12 724.89,598.08 749.19,596.54 773.49,591.31 797.78,516.57 822.08,465.95 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='822.10' y='489.11' text-anchor='middle' style='font-size: 11.04px; fill: #999999; font-family: Liberation Sans;' textLength='47.79px' lengthAdjust='spacingAndGlyphs'>Barnsley</text>
-<text x='822.09' y='461.43' text-anchor='middle' style='font-size: 11.04px; fill: #999999; font-family: Liberation Sans;' textLength='53.55px' lengthAdjust='spacingAndGlyphs'>Wakefield</text>
+<text x='822.02' y='489.11' text-anchor='middle' style='font-size: 11.04px; fill: #999999; font-family: Liberation Sans;' textLength='47.79px' lengthAdjust='spacingAndGlyphs'>Barnsley</text>
+<text x='822.11' y='461.43' text-anchor='middle' style='font-size: 11.04px; fill: #999999; font-family: Liberation Sans;' textLength='53.55px' lengthAdjust='spacingAndGlyphs'>Wakefield</text>
 <rect x='591.27' y='443.70' width='267.25' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
