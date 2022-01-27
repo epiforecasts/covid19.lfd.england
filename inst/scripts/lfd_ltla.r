@@ -29,7 +29,7 @@ latest <- session %>%
 url <- latest %>%
   html_nodes(xpath = "//div/h3/a") %>%
   html_attr("href") %>%
-  grep(pattern = "tests.conducted", value = TRUE)
+  grep(pattern = "tests.conducted", value = TRUE, ignore.case = TRUE)
 
 filename <- sub("^.*/([^/]+)$", "\\1", url)
 
