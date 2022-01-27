@@ -1924,13 +1924,12 @@
 <polyline points='330.68,385.05 354.98,389.91 379.27,389.02 403.57,393.86 427.87,386.87 452.16,382.10 476.46,316.53 500.75,300.49 525.05,317.41 549.34,304.37 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='330.68,390.48 354.98,389.31 379.27,390.81 403.57,391.45 427.87,394.19 452.16,384.37 476.46,330.23 500.75,300.76 525.05,331.34 549.34,322.75 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='330.68,395.49 354.98,394.53 379.27,393.53 403.57,393.58 427.87,391.73 452.16,383.02 476.46,338.02 500.75,320.07 525.05,321.74 549.34,313.80 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<line x1='540.20' y1='287.36' x2='548.87' y2='270.73' style='stroke-width: 1.07; stroke: #FF7F00;' />
-<line x1='539.89' y1='272.01' x2='548.24' y2='267.73' style='stroke-width: 1.07; stroke: #FF7F00;' />
-<line x1='560.69' y1='281.61' x2='550.06' y2='269.47' style='stroke-width: 1.07; stroke: #FF7F00;' />
-<text x='474.31' y='292.95' text-anchor='middle' style='font-size: 11.04px; fill: #FF7F00; font-family: Liberation Sans;' textLength='128.18px' lengthAdjust='spacingAndGlyphs'>Blackburn with Darwen</text>
-<text x='516.95' y='277.67' text-anchor='middle' style='font-size: 11.04px; fill: #FF7F00; font-family: Liberation Sans;' textLength='42.28px' lengthAdjust='spacingAndGlyphs'>Burnley</text>
-<text x='563.74' y='291.45' text-anchor='middle' style='font-size: 11.04px; fill: #FF7F00; font-family: Liberation Sans;' textLength='36.89px' lengthAdjust='spacingAndGlyphs'>Pendle</text>
-<text x='556.27' y='262.45' text-anchor='middle' style='font-size: 11.04px; fill: #FF7F00; font-family: Liberation Sans;' textLength='51.80px' lengthAdjust='spacingAndGlyphs'>Tameside</text>
+<line x1='540.15' y1='287.70' x2='548.88' y2='270.73' style='stroke-width: 1.07; stroke: #FF7F00;' />
+<line x1='561.21' y1='283.41' x2='550.02' y2='269.48' style='stroke-width: 1.07; stroke: #FF7F00;' />
+<text x='474.25' y='293.25' text-anchor='middle' style='font-size: 11.04px; fill: #FF7F00; font-family: Liberation Sans;' textLength='128.18px' lengthAdjust='spacingAndGlyphs'>Blackburn with Darwen</text>
+<text x='523.31' y='277.98' text-anchor='middle' style='font-size: 11.04px; fill: #FF7F00; font-family: Liberation Sans;' textLength='42.28px' lengthAdjust='spacingAndGlyphs'>Burnley</text>
+<text x='563.74' y='293.25' text-anchor='middle' style='font-size: 11.04px; fill: #FF7F00; font-family: Liberation Sans;' textLength='36.89px' lengthAdjust='spacingAndGlyphs'>Pendle</text>
+<text x='556.26' y='262.60' text-anchor='middle' style='font-size: 11.04px; fill: #FF7F00; font-family: Liberation Sans;' textLength='51.80px' lengthAdjust='spacingAndGlyphs'>Tameside</text>
 <rect x='318.54' y='233.10' width='267.25' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
@@ -2290,8 +2289,8 @@
 <polyline points='330.68,603.63 354.98,603.12 379.27,603.20 403.57,604.37 427.87,605.25 452.16,597.95 476.46,556.35 500.75,540.62 525.05,544.12 549.34,497.32 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='330.68,602.14 354.98,600.29 379.27,605.69 403.57,599.52 427.87,602.71 452.16,592.90 476.46,539.49 500.75,516.61 525.05,510.96 549.34,474.09 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='330.68,601.29 354.98,601.59 379.27,604.67 403.57,604.65 427.87,601.63 452.16,595.34 476.46,545.34 500.75,522.63 525.05,525.31 549.34,501.96 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='549.24' y='456.44' text-anchor='middle' style='font-size: 11.04px; fill: #F781BF; font-family: Liberation Sans;' textLength='49.69px' lengthAdjust='spacingAndGlyphs'>Sandwell</text>
-<text x='549.56' y='486.61' text-anchor='middle' style='font-size: 11.04px; fill: #F781BF; font-family: Liberation Sans;' textLength='38.67px' lengthAdjust='spacingAndGlyphs'>Walsall</text>
+<text x='549.54' y='456.44' text-anchor='middle' style='font-size: 11.04px; fill: #F781BF; font-family: Liberation Sans;' textLength='49.69px' lengthAdjust='spacingAndGlyphs'>Sandwell</text>
+<text x='549.20' y='486.61' text-anchor='middle' style='font-size: 11.04px; fill: #F781BF; font-family: Liberation Sans;' textLength='38.67px' lengthAdjust='spacingAndGlyphs'>Walsall</text>
 <rect x='318.54' y='443.70' width='267.25' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
@@ -3666,10 +3665,10 @@
 <polyline points='603.42,599.87 627.71,600.60 652.01,606.09 676.30,605.72 700.60,605.19 724.89,596.20 749.19,548.64 773.49,519.82 797.78,511.27 822.08,493.16 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='603.42,600.35 627.71,601.13 652.01,598.73 676.30,600.18 700.60,595.00 724.89,585.09 749.19,537.22 773.49,514.92 797.78,502.55 822.08,473.95 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='603.42,593.00 627.71,593.89 652.01,595.18 676.30,601.26 700.60,599.92 724.89,595.35 749.19,530.06 773.49,486.06 797.78,495.61 822.08,480.80 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<line x1='793.34' y1='494.27' x2='821.00' y2='478.84' style='stroke-width: 1.07; stroke: #999999;' />
+<line x1='793.33' y1='494.27' x2='821.00' y2='478.84' style='stroke-width: 1.07; stroke: #999999;' />
 <line x1='826.48' y1='489.18' x2='822.47' y2='479.67' style='stroke-width: 1.07; stroke: #999999;' />
 <line x1='801.80' y1='479.33' x2='820.79' y2='474.29' style='stroke-width: 1.07; stroke: #999999;' />
-<text x='718.02' y='499.01' text-anchor='middle' style='font-size: 11.04px; fill: #999999; font-family: Liberation Sans;' textLength='147.04px' lengthAdjust='spacingAndGlyphs'>Kingston upon Hull, City of</text>
+<text x='718.01' y='499.02' text-anchor='middle' style='font-size: 11.04px; fill: #999999; font-family: Liberation Sans;' textLength='147.04px' lengthAdjust='spacingAndGlyphs'>Kingston upon Hull, City of</text>
 <text x='831.02' y='470.28' text-anchor='middle' style='font-size: 11.04px; fill: #999999; font-family: Liberation Sans;' textLength='47.79px' lengthAdjust='spacingAndGlyphs'>Barnsley</text>
 <text x='826.69' y='499.02' text-anchor='middle' style='font-size: 11.04px; fill: #999999; font-family: Liberation Sans;' textLength='56.46px' lengthAdjust='spacingAndGlyphs'>Doncaster</text>
 <text x='831.01' y='455.34' text-anchor='middle' style='font-size: 11.04px; fill: #999999; font-family: Liberation Sans;' textLength='47.83px' lengthAdjust='spacingAndGlyphs'>Bradford</text>
