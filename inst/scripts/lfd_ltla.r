@@ -43,8 +43,8 @@ ltlas <- read_ods(file.path(dir, filename),
   as_tibble() %>%
   clean_names() %>%
   select(-total) %>%
-  mutate(test_result = sub("Total number of (positive|negative) LFD tests", "\\1",
-                    test_result)) %>%
+  mutate(test_result = sub("Total number of (positive|negative) LFD tests",
+                           "\\1", test_result)) %>%
   filter(grepl("(positive|negative)", test_result)) %>%
   pivot_longer(names_to = "date", starts_with("x")) %>%
   mutate(value = as.integer(value)) %>%
@@ -76,7 +76,6 @@ wr <- wr_latest %>%
          rel_error = rel_error + rel_error_previous,
          lower_ratio = pmax(0, ratio - rel_error * ratio),
          upper_ratio = ratio + rel_error * ratio) %>%
-  pivot_wider() %>%
   select(date, ltla, ends_with("ratio"))
 
 inc_r <- df %>%
