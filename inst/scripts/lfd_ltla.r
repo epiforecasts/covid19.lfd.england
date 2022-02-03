@@ -17,6 +17,8 @@ url <- paste0("https://www.gov.uk/government/collections/",
               "nhs-test-and-trace-statistics-england-weekly-reports")
 session <- session(url)
 
+skip <- 2 + as.integer(today() - as.Date("2022-01-27")) %% 2L
+
 weekly_url <- session %>%
   html_nodes(xpath = "//div/ul/li/a") %>%
   html_attr("href") %>%
@@ -37,7 +39,7 @@ dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
 ltlas <- read_ods(file.path(dir, filename),
-                  sheet = "Table_5", skip = 2) %>%
+                  sheet = "Table_5", skip = skip) %>%
   as_tibble() %>%
   clean_names() %>%
   select(-total) %>%

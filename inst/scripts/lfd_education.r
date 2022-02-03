@@ -14,6 +14,8 @@ url <- paste0("https://www.gov.uk/government/collections/",
               "nhs-test-and-trace-statistics-england-weekly-reports")
 session <- session(url)
 
+skip <- 2 + as.integer(today() - as.Date("2022-01-27")) %% 2L
+
 weekly_url <- session %>%
   html_nodes(xpath = "//div/ul/li/a") %>%
   html_attr("href") %>%
@@ -34,7 +36,7 @@ dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
 ed_settings <- read_ods(file.path(dir, filename),
-                        sheet = "Table_7", skip = 2) %>%
+                        sheet = "Table_7", skip = skip) %>%
   clean_names() %>%
   slice(1:20) %>%
   rename(name = lfd_testing_in_education) %>%
@@ -59,7 +61,7 @@ ed_settings <- read_ods(file.path(dir, filename),
   mutate(total = positive + negative)
 
 schools <- read_ods(file.path(dir, filename),
-                        sheet = "Table_8", skip = 2) %>%
+                        sheet = "Table_8", skip = skip) %>%
   clean_names() %>%
   rename(name = lfd_testing_in_education_by_role) %>%
   select(-total) %>%
