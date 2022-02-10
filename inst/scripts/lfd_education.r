@@ -14,8 +14,6 @@ url <- paste0("https://www.gov.uk/government/collections/",
               "nhs-test-and-trace-statistics-england-weekly-reports")
 session <- session(url)
 
-skip <- 2 + as.integer(today() - as.Date("2022-01-27")) %% 2L
-
 weekly_url <- session %>%
   html_nodes(xpath = "//div/ul/li/a") %>%
   html_attr("href") %>%
@@ -35,8 +33,11 @@ filename <- sub("^.*/([^/]+)$", "\\1", url)
 dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
-ed_settings <- read_ods(file.path(dir, filename),
-                        sheet = "Table_7", skip = skip) %>%
+ed_settings <- read_ods(file.path(dir, filename), sheet = "Table_7")
+header_row <- which(ed_settings[, 1] == "LFD testing in education")
+
+ed_settings <- ed_settings %>%
+  row_to_names(header_row) %>%
   clean_names() %>%
   slice(1:20) %>%
   rename(name = lfd_testing_in_education) %>%
@@ -60,8 +61,8 @@ ed_settings <- read_ods(file.path(dir, filename),
   pivot_wider(names_from = "test") %>%
   mutate(total = positive + negative)
 
-schools <- read_ods(file.path(dir, filename),
-                        sheet = "Table_8", skip = skip) %>%
+schools <- read_ods(file.path(dir, filename), sheet = "Table_8") %>%
+  row_to_names(header_row) %>%
   clean_names() %>%
   rename(name = lfd_testing_in_education_by_role) %>%
   select(-total) %>%
@@ -143,4 +144,3 @@ p_testing <- ggplot(dfb,
 
 suppressWarnings(dir.create(here::here("figure")))
 ggsave(here::here("figure", "lfd_testing.svg"), p_testing, width = 10, height = 5)
-
