@@ -3425,9 +3425,10 @@
 <polyline points='76.20,264.65 136.99,206.99 197.78,189.24 258.58,131.94 319.37,147.50 380.16,174.40 440.95,126.30 501.75,99.06 562.54,100.37 623.33,137.94 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='76.20,274.47 136.99,180.31 197.78,179.20 258.58,162.47 319.37,173.15 380.16,191.71 440.95,154.88 501.75,125.32 562.54,96.02 623.33,145.13 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='76.20,280.70 136.99,198.56 197.78,174.49 258.58,146.56 319.37,160.28 380.16,177.96 440.95,166.55 501.75,152.27 562.54,140.36 623.33,170.86 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='545.28' y='112.78' text-anchor='middle' style='font-size: 11.04px;fill: #999999; font-family: "Liberation Sans";' textLength='147.04px' lengthAdjust='spacingAndGlyphs'>Kingston upon Hull, City of</text>
-<text x='620.23' y='82.33' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='59.60px' lengthAdjust='spacingAndGlyphs'>Gloucester</text>
-<text x='660.25' y='98.48' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='64.26px' lengthAdjust='spacingAndGlyphs'>Tewkesbury</text>
+<line x1='604.99' y1='87.39' x2='622.24' y2='95.53' style='stroke-width: 1.07; stroke: #A65628;' />
+<text x='637.40' y='105.16' text-anchor='middle' style='font-size: 11.04px;fill: #999999; font-family: "Liberation Sans";' textLength='147.04px' lengthAdjust='spacingAndGlyphs'>Kingston upon Hull, City of</text>
+<text x='640.07' y='82.28' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='59.60px' lengthAdjust='spacingAndGlyphs'>Gloucester</text>
+<text x='571.06' y='89.92' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='64.26px' lengthAdjust='spacingAndGlyphs'>Tewkesbury</text>
 <rect x='45.80' y='5.48' width='668.72' height='338.34' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0MzIuMDA=)'>
