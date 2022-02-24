@@ -3425,9 +3425,10 @@
 <polyline points='76.20,206.99 136.99,189.24 197.78,131.94 258.58,147.50 319.37,174.40 380.16,126.30 440.95,99.06 501.75,100.37 562.54,137.94 623.33,159.39 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='76.20,180.31 136.99,179.20 197.78,162.47 258.58,173.15 319.37,191.71 380.16,154.88 440.95,125.32 501.75,96.02 562.54,145.13 623.33,138.93 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='76.20,198.56 136.99,174.49 197.78,146.56 258.58,160.28 319.37,177.96 380.16,166.55 440.95,152.27 501.75,140.36 562.54,170.86 623.33,158.85 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='566.93' y='141.01' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='103.35px' lengthAdjust='spacingAndGlyphs'>Brighton and Hove</text>
-<text x='658.12' y='126.95' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='59.60px' lengthAdjust='spacingAndGlyphs'>Gloucester</text>
-<text x='619.15' y='111.74' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='64.26px' lengthAdjust='spacingAndGlyphs'>Tewkesbury</text>
+<line x1='633.25' y1='132.68' x2='624.37' y2='128.00' style='stroke-width: 1.07; stroke: #FFFF33;' />
+<text x='659.25' y='142.52' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='103.35px' lengthAdjust='spacingAndGlyphs'>Brighton and Hove</text>
+<text x='588.51' y='126.91' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='59.60px' lengthAdjust='spacingAndGlyphs'>Gloucester</text>
+<text x='639.97' y='111.59' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='64.26px' lengthAdjust='spacingAndGlyphs'>Tewkesbury</text>
 <rect x='45.80' y='5.48' width='668.72' height='338.34' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0MzIuMDA=)'>
