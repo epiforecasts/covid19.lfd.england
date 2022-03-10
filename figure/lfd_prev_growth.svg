@@ -2193,22 +2193,22 @@
 <polyline points='243.91,129.84 243.91,129.84 ' style='stroke-width: 1.07; stroke: #B2DF8A; stroke-opacity: 0.15; stroke-linecap: butt;' />
 <polyline points='243.91,129.84 243.91,193.78 ' style='stroke-width: 1.07; stroke: #B2DF8A; stroke-opacity: 0.15; stroke-linecap: butt;' />
 <polyline points='243.91,193.78 243.91,193.78 ' style='stroke-width: 1.07; stroke: #B2DF8A; stroke-opacity: 0.15; stroke-linecap: butt;' />
-<line x1='299.86' y1='115.97' x2='283.77' y2='112.76' style='stroke-width: 1.07; stroke: #E31A1C;' />
-<text x='194.91' y='440.13' text-anchor='middle' style='font-size: 11.04px;fill: #33A02C; font-family: "Liberation Sans";' textLength='120.77px' lengthAdjust='spacingAndGlyphs'>Redcar and Cleveland</text>
-<text x='286.14' y='402.73' text-anchor='middle' style='font-size: 11.04px;fill: #FB9A99; font-family: "Liberation Sans";' textLength='128.18px' lengthAdjust='spacingAndGlyphs'>Blackburn with Darwen</text>
-<text x='300.71' y='74.09' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='77.83px' lengthAdjust='spacingAndGlyphs'>Bristol, City of</text>
-<text x='180.18' y='124.55' text-anchor='middle' style='font-size: 11.04px;fill: #E31A1C; font-family: "Liberation Sans";' textLength='103.35px' lengthAdjust='spacingAndGlyphs'>Brighton and Hove</text>
-<text x='154.67' y='422.60' text-anchor='middle' style='font-size: 11.04px;fill: #FB9A99; font-family: "Liberation Sans";' textLength='99.09px' lengthAdjust='spacingAndGlyphs'>Barrow-in-Furness</text>
-<text x='186.04' y='401.03' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='44.34px' lengthAdjust='spacingAndGlyphs'>Torridge</text>
-<text x='325.62' y='120.10' text-anchor='middle' style='font-size: 11.04px;fill: #E31A1C; font-family: "Liberation Sans";' textLength='47.93px' lengthAdjust='spacingAndGlyphs'>Hastings</text>
-<text x='206.59' y='81.23' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='67.15px' lengthAdjust='spacingAndGlyphs'>Cheltenham</text>
-<text x='286.78' y='104.71' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='36.35px' lengthAdjust='spacingAndGlyphs'>Stroud</text>
-<text x='222.45' y='63.86' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='64.26px' lengthAdjust='spacingAndGlyphs'>Tewkesbury</text>
-<text x='232.12' y='419.77' text-anchor='middle' style='font-size: 11.04px;fill: #FB9A99; font-family: "Liberation Sans";' textLength='36.89px' lengthAdjust='spacingAndGlyphs'>Pendle</text>
-<text x='263.26' y='89.55' text-anchor='middle' style='font-size: 11.04px;fill: #E31A1C; font-family: "Liberation Sans";' textLength='25.88px' lengthAdjust='spacingAndGlyphs'>Adur</text>
-<text x='267.00' y='132.53' text-anchor='middle' style='font-size: 11.04px;fill: #FF7F00; font-family: "Liberation Sans";' textLength='55.55px' lengthAdjust='spacingAndGlyphs'>Worcester</text>
-<text x='202.40' y='385.45' text-anchor='middle' style='font-size: 11.04px;fill: #FF7F00; font-family: "Liberation Sans";' textLength='87.29px' lengthAdjust='spacingAndGlyphs'>Wolverhampton</text>
-<text x='207.71' y='102.41' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='68.32px' lengthAdjust='spacingAndGlyphs'>Wandsworth</text>
+<line x1='299.96' y1='116.09' x2='283.77' y2='112.76' style='stroke-width: 1.07; stroke: #E31A1C;' />
+<text x='195.29' y='439.89' text-anchor='middle' style='font-size: 11.04px;fill: #33A02C; font-family: "Liberation Sans";' textLength='120.77px' lengthAdjust='spacingAndGlyphs'>Redcar and Cleveland</text>
+<text x='286.50' y='402.76' text-anchor='middle' style='font-size: 11.04px;fill: #FB9A99; font-family: "Liberation Sans";' textLength='128.18px' lengthAdjust='spacingAndGlyphs'>Blackburn with Darwen</text>
+<text x='300.87' y='74.17' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='77.83px' lengthAdjust='spacingAndGlyphs'>Bristol, City of</text>
+<text x='180.14' y='124.56' text-anchor='middle' style='font-size: 11.04px;fill: #E31A1C; font-family: "Liberation Sans";' textLength='103.35px' lengthAdjust='spacingAndGlyphs'>Brighton and Hove</text>
+<text x='154.58' y='422.61' text-anchor='middle' style='font-size: 11.04px;fill: #FB9A99; font-family: "Liberation Sans";' textLength='99.09px' lengthAdjust='spacingAndGlyphs'>Barrow-in-Furness</text>
+<text x='186.01' y='400.84' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='44.34px' lengthAdjust='spacingAndGlyphs'>Torridge</text>
+<text x='325.73' y='120.23' text-anchor='middle' style='font-size: 11.04px;fill: #E31A1C; font-family: "Liberation Sans";' textLength='47.93px' lengthAdjust='spacingAndGlyphs'>Hastings</text>
+<text x='206.74' y='81.29' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='67.15px' lengthAdjust='spacingAndGlyphs'>Cheltenham</text>
+<text x='286.80' y='105.05' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='36.35px' lengthAdjust='spacingAndGlyphs'>Stroud</text>
+<text x='222.54' y='63.87' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='64.26px' lengthAdjust='spacingAndGlyphs'>Tewkesbury</text>
+<text x='232.00' y='419.69' text-anchor='middle' style='font-size: 11.04px;fill: #FB9A99; font-family: "Liberation Sans";' textLength='36.89px' lengthAdjust='spacingAndGlyphs'>Pendle</text>
+<text x='262.89' y='89.66' text-anchor='middle' style='font-size: 11.04px;fill: #E31A1C; font-family: "Liberation Sans";' textLength='25.88px' lengthAdjust='spacingAndGlyphs'>Adur</text>
+<text x='266.93' y='132.58' text-anchor='middle' style='font-size: 11.04px;fill: #FF7F00; font-family: "Liberation Sans";' textLength='55.55px' lengthAdjust='spacingAndGlyphs'>Worcester</text>
+<text x='202.46' y='385.44' text-anchor='middle' style='font-size: 11.04px;fill: #FF7F00; font-family: "Liberation Sans";' textLength='87.29px' lengthAdjust='spacingAndGlyphs'>Wolverhampton</text>
+<text x='207.75' y='102.40' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='68.32px' lengthAdjust='spacingAndGlyphs'>Wandsworth</text>
 <line x1='247.80' y1='472.29' x2='247.80' y2='5.48' style='stroke-width: 1.07; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
 <rect x='45.80' y='5.48' width='579.63' height='466.82' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
