@@ -7,22 +7,16 @@ on:
 jobs:
   get_lfd:
     runs-on: ubuntu-20.04
-    env:
-      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
-      GITHUB_PAT: ${{ secrets.API_TOKEN_GITHUB }}
     steps:
-    - uses: actions/checkout@master
-    - uses: r-lib/actions/setup-r@v1
+    - uses: actions/checkout@v2
+    
+    - uses: r-lib/actions/setup-r@v2
+      with:
+        use-public-rspm: true
 
-    - name: Install system dependencies
-      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
-
-    - name: Install R dependencies
-      run: |
-        install.packages(c("readODS", "here", "dplyr", "janitor", "tidyr", "ggplot2", "scales", "binom", "lubridate", "rvest", "ggrepel", "viridis", "purrr", "devtools", "svglite"))
-        devtools::install()
-        devtools::install_github("epiforecasts/covid19.nhs.data")
-      shell: Rscript {0}
+    - uses: r-lib/actions/setup-r-dependencies@v2
+      with:
+        extra-packages: local::.
 
     - name: Obtain and plot LFD testing data
       run: |
@@ -36,5 +30,3 @@ jobs:
         git add --all
         git diff-index --quiet HEAD || git commit -m "LFD - weekly"
         git push
-      env:
-        AUTH: ${{secrets.API_TOKEN_GITHUB}}
