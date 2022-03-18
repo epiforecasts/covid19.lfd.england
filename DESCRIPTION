@@ -18,6 +18,7 @@ Depends:
     scales,
     binom,
     lubridate,
+    rvest,
     covid19.nhs.data
 Remotes:
     epiforecasts/covid19.nhs.data
