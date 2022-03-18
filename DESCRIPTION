@@ -20,7 +20,8 @@ Depends:
     lubridate,
     rvest,
     purrr,
-    svglite
+    svglite,
+    ggrepel
 License: MIT
 ByteCompile: true
 Encoding: UTF-8
