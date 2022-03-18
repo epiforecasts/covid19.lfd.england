@@ -19,7 +19,8 @@ Depends:
     binom,
     lubridate,
     rvest,
-    purrr
+    purrr,
+    svglite
 License: MIT
 ByteCompile: true
 Encoding: UTF-8
