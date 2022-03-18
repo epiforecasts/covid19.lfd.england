@@ -21,7 +21,9 @@ Depends:
     rvest,
     purrr,
     svglite,
-    ggrepel
+    ggrepel,
+    viridis,
+    sf
 License: MIT
 ByteCompile: true
 Encoding: UTF-8
