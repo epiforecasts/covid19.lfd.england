@@ -19,9 +19,7 @@ Depends:
     binom,
     lubridate,
     rvest,
-    covid19.nhs.data
-Remotes:
-    epiforecasts/covid19.nhs.data
+    purrr
 License: MIT
 ByteCompile: true
 Encoding: UTF-8
