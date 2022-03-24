@@ -3424,11 +3424,11 @@
 <polyline points='81.54,168.93 141.82,192.64 202.11,150.24 262.39,126.22 322.67,127.38 382.96,160.50 443.24,179.41 503.53,188.06 563.81,184.85 624.09,70.17 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='81.54,191.54 141.82,207.90 202.11,175.43 262.39,149.38 322.67,123.55 382.96,166.84 443.24,161.37 503.53,162.47 563.81,154.17 624.09,61.04 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='81.54,180.19 141.82,195.78 202.11,185.72 262.39,173.13 322.67,162.64 382.96,189.52 443.24,178.93 503.53,182.23 563.81,157.32 624.09,127.59 ' style='stroke-width: 1.07; stroke: #4DAF4A; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<line x1='611.19' y1='39.09' x2='623.03' y2='45.00' style='stroke-width: 1.07; stroke: #4DAF4A;' />
-<text x='599.02' y='17.12' text-anchor='middle' style='font-size: 11.04px;fill: #377EB8; font-family: "Liberation Sans";' textLength='40.08px' lengthAdjust='spacingAndGlyphs'>Maldon</text>
-<text x='650.20' y='34.42' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='67.15px' lengthAdjust='spacingAndGlyphs'>Cheltenham</text>
-<text x='637.52' y='56.40' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='146.79px' lengthAdjust='spacingAndGlyphs'>Hammersmith and Fulham</text>
-<text x='542.51' y='41.14' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='133.77px' lengthAdjust='spacingAndGlyphs'>Richmond upon Thames</text>
+<line x1='608.54' y1='38.74' x2='622.96' y2='45.04' style='stroke-width: 1.07; stroke: #4DAF4A;' />
+<text x='598.97' y='17.12' text-anchor='middle' style='font-size: 11.04px;fill: #377EB8; font-family: "Liberation Sans";' textLength='40.08px' lengthAdjust='spacingAndGlyphs'>Maldon</text>
+<text x='647.53' y='34.44' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='67.15px' lengthAdjust='spacingAndGlyphs'>Cheltenham</text>
+<text x='637.52' y='56.37' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='146.79px' lengthAdjust='spacingAndGlyphs'>Hammersmith and Fulham</text>
+<text x='539.85' y='41.14' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='133.77px' lengthAdjust='spacingAndGlyphs'>Richmond upon Thames</text>
 <rect x='51.40' y='5.48' width='663.12' height='338.34' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0MzIuMDA=)'>

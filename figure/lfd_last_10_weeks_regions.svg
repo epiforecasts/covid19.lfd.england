@@ -939,9 +939,9 @@
 <polyline points='63.46,585.83 87.59,574.09 111.71,546.43 135.84,524.37 159.96,517.29 184.09,532.32 208.22,550.44 232.34,542.64 256.47,552.25 280.60,517.90 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='63.46,579.57 87.59,580.53 111.71,562.80 135.84,538.05 159.96,533.20 184.09,534.30 208.22,543.27 232.34,542.17 256.47,549.22 280.60,510.56 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='63.46,580.57 87.59,575.93 111.71,559.61 135.84,535.59 159.96,528.19 184.09,535.23 208.22,541.90 232.34,554.55 256.47,554.65 280.60,499.30 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='236.63' y='472.84' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='77.83px' lengthAdjust='spacingAndGlyphs'>Bristol, City of</text>
-<text x='279.61' y='457.59' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='67.15px' lengthAdjust='spacingAndGlyphs'>Cheltenham</text>
-<text x='281.06' y='488.06' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='64.26px' lengthAdjust='spacingAndGlyphs'>Tewkesbury</text>
+<text x='236.69' y='472.85' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='77.83px' lengthAdjust='spacingAndGlyphs'>Bristol, City of</text>
+<text x='279.61' y='457.63' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='67.15px' lengthAdjust='spacingAndGlyphs'>Cheltenham</text>
+<text x='281.06' y='488.07' text-anchor='middle' style='font-size: 11.04px;fill: #A65628; font-family: "Liberation Sans";' textLength='64.26px' lengthAdjust='spacingAndGlyphs'>Tewkesbury</text>
 <rect x='51.40' y='443.70' width='265.39' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
@@ -2665,15 +2665,15 @@
 <polyline points='605.20,125.94 629.32,135.04 653.45,116.98 677.57,102.50 701.70,88.14 725.83,112.21 749.95,109.17 774.08,109.77 798.21,105.16 822.33,53.38 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='605.20,119.63 629.32,128.30 653.45,122.70 677.57,115.71 701.70,109.87 725.83,124.82 749.95,118.93 774.08,120.77 798.21,106.91 822.33,90.39 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <line x1='745.33' y1='30.25' x2='821.02' y2='45.92' style='stroke-width: 1.07; stroke: #4DAF4A;' />
-<line x1='812.02' y1='70.01' x2='821.39' y2='62.96' style='stroke-width: 1.07; stroke: #4DAF4A;' />
+<line x1='812.04' y1='70.00' x2='821.39' y2='62.96' style='stroke-width: 1.07; stroke: #4DAF4A;' />
 <line x1='810.62' y1='35.93' x2='821.39' y2='44.05' style='stroke-width: 1.07; stroke: #4DAF4A;' />
-<line x1='743.67' y1='45.47' x2='821.00' y2='58.24' style='stroke-width: 1.07; stroke: #4DAF4A;' />
-<text x='751.48' y='64.62' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='131.23px' lengthAdjust='spacingAndGlyphs'>Hackney/City of London</text>
+<line x1='743.76' y1='45.46' x2='821.00' y2='58.24' style='stroke-width: 1.07; stroke: #4DAF4A;' />
+<text x='751.85' y='64.61' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='131.23px' lengthAdjust='spacingAndGlyphs'>Hackney/City of London</text>
 <text x='670.13' y='34.13' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='146.79px' lengthAdjust='spacingAndGlyphs'>Hammersmith and Fulham</text>
-<text x='791.61' y='79.85' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='126.61px' lengthAdjust='spacingAndGlyphs'>Kingston upon Thames</text>
+<text x='791.61' y='79.84' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='126.61px' lengthAdjust='spacingAndGlyphs'>Kingston upon Thames</text>
 <text x='788.04' y='34.13' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='133.77px' lengthAdjust='spacingAndGlyphs'>Richmond upon Thames</text>
-<text x='698.77' y='49.38' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='86.21px' lengthAdjust='spacingAndGlyphs'>Waltham Forest</text>
-<text x='783.21' y='49.37' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='68.32px' lengthAdjust='spacingAndGlyphs'>Wandsworth</text>
+<text x='698.85' y='49.37' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='86.21px' lengthAdjust='spacingAndGlyphs'>Waltham Forest</text>
+<text x='783.18' y='49.39' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='68.32px' lengthAdjust='spacingAndGlyphs'>Wandsworth</text>
 <rect x='593.13' y='22.49' width='265.39' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
@@ -3406,10 +3406,10 @@
 <polyline points='605.20,373.43 629.32,372.53 653.45,345.90 677.57,322.49 701.70,317.24 725.83,325.44 749.95,322.66 774.08,327.30 798.21,328.31 822.33,282.05 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='605.20,369.24 629.32,368.95 653.45,344.66 677.57,328.15 701.70,325.19 725.83,337.99 749.95,344.34 774.08,347.34 798.21,346.41 822.33,301.07 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='605.20,369.49 629.32,363.10 653.45,335.48 677.57,310.67 701.70,309.74 725.83,320.36 749.95,329.66 774.08,334.79 798.21,332.63 822.33,288.21 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<line x1='793.35' y1='275.31' x2='821.02' y2='269.43' style='stroke-width: 1.07; stroke: #FFFF33;' />
-<text x='803.23' y='264.34' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='103.35px' lengthAdjust='spacingAndGlyphs'>Brighton and Hove</text>
-<text x='826.82' y='284.03' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='56.17px' lengthAdjust='spacingAndGlyphs'>Elmbridge</text>
-<text x='744.61' y='279.60' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='93.88px' lengthAdjust='spacingAndGlyphs'>Epsom and Ewell</text>
+<line x1='793.57' y1='275.31' x2='821.02' y2='269.44' style='stroke-width: 1.07; stroke: #FFFF33;' />
+<text x='803.25' y='264.36' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='103.35px' lengthAdjust='spacingAndGlyphs'>Brighton and Hove</text>
+<text x='826.84' y='283.16' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='56.17px' lengthAdjust='spacingAndGlyphs'>Elmbridge</text>
+<text x='744.83' y='279.60' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='93.88px' lengthAdjust='spacingAndGlyphs'>Epsom and Ewell</text>
 <rect x='593.13' y='233.10' width='265.39' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
