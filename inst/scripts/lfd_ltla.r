@@ -1,4 +1,4 @@
-library("readODS")
+library("readxl")
 library("here")
 library("dplyr")
 library("janitor")
@@ -36,7 +36,7 @@ filename <- sub("^.*/([^/]+)$", "\\1", url)
 dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
-ltlas <- read_ods(file.path(dir, filename), sheet = "Table_5")
+ltlas <- read_excel(file.path(dir, filename), sheet = "Table_5")
 header_row <- which(ltlas[, 1] == "LTLA")
 
 ltlas <- ltlas %>%

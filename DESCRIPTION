@@ -9,7 +9,7 @@ Authors@R:
 Description: Contains all the code and data required to generate the figures and estimates in the note. 
 Depends:
     R (>= 4.0.0),
-    readODS,
+    readxl,
     here,
     dplyr,
     janitor,
