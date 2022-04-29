@@ -36,7 +36,7 @@ filename <- sub("^.*/([^/]+)$", "\\1", url)
 dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
-ltlas <- read_excel(file.path(dir, filename), sheet = "Table_5")
+ltlas <- read_excel(file.path(dir, filename), sheet = "Table_4")
 header_row <- which(ltlas[, 1] == "LTLA")
 
 ltlas <- ltlas %>%

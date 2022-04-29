@@ -33,7 +33,7 @@ filename <- sub("^.*/([^/]+)$", "\\1", url)
 dir <- tempdir()
 download.file(url, file.path(dir, filename))
 
-ed_settings <- read_excel(file.path(dir, filename), sheet = "Table_7")
+ed_settings <- read_excel(file.path(dir, filename), sheet = "Table_6")
 header_row <- which(ed_settings[, 1] == "LFD testing in education")
 
 ed_settings <- ed_settings %>%
@@ -61,7 +61,7 @@ ed_settings <- ed_settings %>%
   pivot_wider(names_from = "test") %>%
   mutate(total = positive + negative)
 
-schools <- read_excel(file.path(dir, filename), sheet = "Table_8") %>%
+schools <- read_excel(file.path(dir, filename), sheet = "Table_7") %>%
   row_to_names(header_row) %>%
   clean_names() %>%
   rename(name = lfd_testing_in_education_by_role) %>%
