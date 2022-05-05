@@ -598,7 +598,7 @@
 <polyline points='55.20,366.86 79.58,379.66 103.96,381.05 128.34,363.60 152.72,334.54 177.10,299.75 201.48,289.31 225.86,289.19 250.24,289.98 274.62,298.57 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='55.20,365.20 79.58,374.15 103.96,380.13 128.34,363.98 152.72,325.25 177.10,297.06 201.48,281.09 225.86,279.05 250.24,292.89 274.62,297.78 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <text x='278.60' y='289.80' text-anchor='middle' style='font-size: 11.04px;fill: #984EA3; font-family: "Liberation Sans";' textLength='57.98px' lengthAdjust='spacingAndGlyphs'>Darlington</text>
-<text x='262.38' y='273.14' text-anchor='middle' style='font-size: 11.04px;fill: #984EA3; font-family: "Liberation Sans";' textLength='82.29px' lengthAdjust='spacingAndGlyphs'>North Tyneside</text>
+<text x='262.35' y='273.12' text-anchor='middle' style='font-size: 11.04px;fill: #984EA3; font-family: "Liberation Sans";' textLength='82.29px' lengthAdjust='spacingAndGlyphs'>North Tyneside</text>
 <rect x='43.01' y='233.10' width='268.18' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
@@ -1474,7 +1474,7 @@
 <polyline points='328.86,156.49 353.24,159.11 377.62,150.35 402.00,122.84 426.38,94.71 450.76,77.01 475.15,85.13 499.53,90.48 523.91,84.57 548.29,99.64 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='328.86,159.67 353.24,158.75 377.62,158.16 402.00,133.62 426.38,93.49 450.76,72.31 475.15,83.99 499.53,97.01 523.91,104.64 548.29,108.84 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='328.86,145.82 353.24,143.67 377.62,153.19 402.00,126.39 426.38,82.28 450.76,76.84 475.15,75.49 499.53,79.92 523.91,90.33 548.29,102.06 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='550.94' y='69.67' text-anchor='middle' style='font-size: 11.04px;fill: #377EB8; font-family: "Liberation Sans";' textLength='60.60px' lengthAdjust='spacingAndGlyphs'>Cambridge</text>
+<text x='550.94' y='69.66' text-anchor='middle' style='font-size: 11.04px;fill: #377EB8; font-family: "Liberation Sans";' textLength='60.60px' lengthAdjust='spacingAndGlyphs'>Cambridge</text>
 <text x='482.15' y='91.60' text-anchor='middle' style='font-size: 11.04px;fill: #377EB8; font-family: "Liberation Sans";' textLength='123.04px' lengthAdjust='spacingAndGlyphs'>South Cambridgeshire</text>
 <rect x='316.67' y='22.49' width='268.18' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
@@ -2677,17 +2677,17 @@
 <polyline points='602.53,146.01 626.91,149.27 651.29,148.06 675.67,104.94 700.05,73.98 724.43,61.14 748.81,69.53 773.19,78.05 797.57,85.48 821.95,102.28 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='602.53,139.23 626.91,139.64 651.29,136.52 675.67,101.51 700.05,69.13 724.43,61.41 748.81,68.31 773.19,76.44 797.57,71.71 821.95,94.65 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='602.53,145.84 626.91,147.08 651.29,137.71 675.67,126.53 700.05,98.85 724.43,74.31 748.81,85.22 773.19,63.68 797.57,57.38 821.95,68.22 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<line x1='742.53' y1='66.32' x2='820.58' y2='71.90' style='stroke-width: 1.07; stroke: #4DAF4A;' />
-<line x1='795.63' y1='51.01' x2='820.58' y2='49.43' style='stroke-width: 1.07; stroke: #4DAF4A;' />
-<line x1='815.80' y1='41.62' x2='821.25' y2='48.07' style='stroke-width: 1.07; stroke: #4DAF4A;' />
+<line x1='742.53' y1='66.31' x2='820.58' y2='71.90' style='stroke-width: 1.07; stroke: #4DAF4A;' />
+<line x1='801.37' y1='51.02' x2='820.58' y2='49.46' style='stroke-width: 1.07; stroke: #4DAF4A;' />
+<line x1='815.81' y1='41.66' x2='821.25' y2='48.07' style='stroke-width: 1.07; stroke: #4DAF4A;' />
 <line x1='802.33' y1='66.29' x2='820.59' y2='68.09' style='stroke-width: 1.07; stroke: #4DAF4A;' />
 <text x='831.93' y='69.99' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='45.99px' lengthAdjust='spacingAndGlyphs'>Camden</text>
-<text x='789.29' y='85.56' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='131.23px' lengthAdjust='spacingAndGlyphs'>Hackney/City of London</text>
-<text x='667.33' y='70.31' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='146.79px' lengthAdjust='spacingAndGlyphs'>Hammersmith and Fulham</text>
+<text x='789.31' y='85.55' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='131.23px' lengthAdjust='spacingAndGlyphs'>Hackney/City of London</text>
+<text x='667.33' y='70.30' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='146.79px' lengthAdjust='spacingAndGlyphs'>Hammersmith and Fulham</text>
 <text x='831.33' y='57.39' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='47.19px' lengthAdjust='spacingAndGlyphs'>Islington</text>
-<text x='727.36' y='55.04' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='132.95px' lengthAdjust='spacingAndGlyphs'>Kensington and Chelsea</text>
-<text x='814.32' y='39.82' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='81.19px' lengthAdjust='spacingAndGlyphs'>Tower Hamlets</text>
-<text x='765.87' y='70.29' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='69.32px' lengthAdjust='spacingAndGlyphs'>Westminster</text>
+<text x='733.10' y='55.05' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='132.95px' lengthAdjust='spacingAndGlyphs'>Kensington and Chelsea</text>
+<text x='814.32' y='39.86' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='81.19px' lengthAdjust='spacingAndGlyphs'>Tower Hamlets</text>
+<text x='765.87' y='70.30' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='69.32px' lengthAdjust='spacingAndGlyphs'>Westminster</text>
 <rect x='590.34' y='22.49' width='268.18' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
