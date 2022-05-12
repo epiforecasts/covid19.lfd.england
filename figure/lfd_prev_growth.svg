@@ -2192,15 +2192,15 @@
 <polyline points='238.40,106.32 238.40,106.32 ' style='stroke-width: 1.07; stroke: #B2DF8A; stroke-opacity: 0.15; stroke-linecap: butt;' />
 <polyline points='238.40,106.32 238.40,198.49 ' style='stroke-width: 1.07; stroke: #B2DF8A; stroke-opacity: 0.15; stroke-linecap: butt;' />
 <polyline points='238.40,198.49 238.40,198.49 ' style='stroke-width: 1.07; stroke: #B2DF8A; stroke-opacity: 0.15; stroke-linecap: butt;' />
-<text x='178.76' y='425.67' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='44.34px' lengthAdjust='spacingAndGlyphs'>Torridge</text>
-<text x='230.91' y='443.36' text-anchor='middle' style='font-size: 11.04px;fill: #E31A1C; font-family: "Liberation Sans";' textLength='62.66px' lengthAdjust='spacingAndGlyphs'>Eastbourne</text>
-<text x='303.10' y='146.07' text-anchor='middle' style='font-size: 11.04px;fill: #33A02C; font-family: "Liberation Sans";' textLength='82.29px' lengthAdjust='spacingAndGlyphs'>North Tyneside</text>
-<text x='249.70' y='130.80' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='45.99px' lengthAdjust='spacingAndGlyphs'>Camden</text>
-<text x='173.16' y='183.13' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='131.23px' lengthAdjust='spacingAndGlyphs'>Hackney/City of London</text>
-<text x='156.69' y='164.41' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='146.79px' lengthAdjust='spacingAndGlyphs'>Hammersmith and Fulham</text>
-<text x='211.46' y='115.49' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='47.19px' lengthAdjust='spacingAndGlyphs'>Islington</text>
-<text x='245.81' y='100.21' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='132.95px' lengthAdjust='spacingAndGlyphs'>Kensington and Chelsea</text>
-<text x='270.31' y='81.18' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='81.19px' lengthAdjust='spacingAndGlyphs'>Tower Hamlets</text>
+<text x='178.86' y='425.56' text-anchor='middle' style='font-size: 11.04px;fill: #FDBF6F; font-family: "Liberation Sans";' textLength='44.34px' lengthAdjust='spacingAndGlyphs'>Torridge</text>
+<text x='230.97' y='443.43' text-anchor='middle' style='font-size: 11.04px;fill: #E31A1C; font-family: "Liberation Sans";' textLength='62.66px' lengthAdjust='spacingAndGlyphs'>Eastbourne</text>
+<text x='303.03' y='146.15' text-anchor='middle' style='font-size: 11.04px;fill: #33A02C; font-family: "Liberation Sans";' textLength='82.29px' lengthAdjust='spacingAndGlyphs'>North Tyneside</text>
+<text x='249.77' y='130.84' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='45.99px' lengthAdjust='spacingAndGlyphs'>Camden</text>
+<text x='173.04' y='183.14' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='131.23px' lengthAdjust='spacingAndGlyphs'>Hackney/City of London</text>
+<text x='156.85' y='164.43' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='146.79px' lengthAdjust='spacingAndGlyphs'>Hammersmith and Fulham</text>
+<text x='211.22' y='115.49' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='47.19px' lengthAdjust='spacingAndGlyphs'>Islington</text>
+<text x='246.03' y='100.04' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='132.95px' lengthAdjust='spacingAndGlyphs'>Kensington and Chelsea</text>
+<text x='270.31' y='81.12' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='81.19px' lengthAdjust='spacingAndGlyphs'>Tower Hamlets</text>
 <text x='217.64' y='149.17' text-anchor='middle' style='font-size: 11.04px;fill: #B2DF8A; font-family: "Liberation Sans";' textLength='69.32px' lengthAdjust='spacingAndGlyphs'>Westminster</text>
 <line x1='251.44' y1='472.29' x2='251.44' y2='5.48' style='stroke-width: 1.07; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
 <rect x='51.40' y='5.48' width='574.04' height='466.82' style='stroke-width: 1.07; stroke: #333333;' />
