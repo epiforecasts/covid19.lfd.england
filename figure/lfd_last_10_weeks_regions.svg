@@ -1926,8 +1926,8 @@
 <polyline points='328.86,300.38 353.24,280.16 377.62,276.18 402.00,297.93 426.38,308.83 450.76,325.46 475.15,359.88 499.53,358.30 523.91,355.64 548.29,356.51 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='328.86,297.88 353.24,280.17 377.62,294.42 402.00,301.66 426.38,314.59 450.76,322.65 475.15,351.35 499.53,350.40 523.91,359.21 548.29,372.44 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='328.86,318.49 353.24,296.40 377.62,299.77 402.00,308.24 426.38,320.38 450.76,328.48 475.15,356.87 499.53,364.28 523.91,374.91 548.29,373.30 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='548.30' y='360.00' text-anchor='middle' style='font-size: 11.04px;fill: #FF7F00; font-family: "Liberation Sans";' textLength='40.74px' lengthAdjust='spacingAndGlyphs'>Carlisle</text>
-<text x='548.30' y='338.50' text-anchor='middle' style='font-size: 11.04px;fill: #FF7F00; font-family: "Liberation Sans";' textLength='64.51px' lengthAdjust='spacingAndGlyphs'>Manchester</text>
+<text x='548.29' y='360.00' text-anchor='middle' style='font-size: 11.04px;fill: #FF7F00; font-family: "Liberation Sans";' textLength='40.74px' lengthAdjust='spacingAndGlyphs'>Carlisle</text>
+<text x='548.29' y='338.50' text-anchor='middle' style='font-size: 11.04px;fill: #FF7F00; font-family: "Liberation Sans";' textLength='64.51px' lengthAdjust='spacingAndGlyphs'>Manchester</text>
 <rect x='316.67' y='233.10' width='268.18' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
@@ -2668,9 +2668,9 @@
 <polyline points='602.53,73.98 626.91,61.14 651.29,69.53 675.67,78.05 700.05,85.48 724.43,102.28 748.81,126.39 773.19,136.30 797.57,139.93 821.95,149.14 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='602.53,69.13 626.91,61.41 651.29,68.31 675.67,76.44 700.05,71.71 724.43,94.65 748.81,134.06 773.19,130.25 797.57,125.10 821.95,134.50 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='602.53,98.85 626.91,74.31 651.29,85.22 675.67,63.68 700.05,57.38 724.43,68.22 748.81,92.17 773.19,109.45 797.57,85.86 821.95,103.53 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='831.93' y='84.67' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='45.99px' lengthAdjust='spacingAndGlyphs'>Camden</text>
-<text x='776.48' y='115.19' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='81.19px' lengthAdjust='spacingAndGlyphs'>Tower Hamlets</text>
-<text x='782.34' y='99.94' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='69.32px' lengthAdjust='spacingAndGlyphs'>Westminster</text>
+<text x='831.89' y='84.69' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='45.99px' lengthAdjust='spacingAndGlyphs'>Camden</text>
+<text x='776.38' y='115.17' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='81.19px' lengthAdjust='spacingAndGlyphs'>Tower Hamlets</text>
+<text x='782.31' y='99.90' text-anchor='middle' style='font-size: 11.04px;fill: #4DAF4A; font-family: "Liberation Sans";' textLength='69.32px' lengthAdjust='spacingAndGlyphs'>Westminster</text>
 <rect x='590.34' y='22.49' width='268.18' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
@@ -3404,8 +3404,8 @@
 <polyline points='602.53,298.11 626.91,279.60 651.29,294.89 675.67,307.72 700.05,315.42 724.43,330.31 748.81,343.08 773.19,357.69 797.57,359.50 821.95,359.91 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='602.53,296.45 626.91,287.35 651.29,296.15 675.67,314.17 700.05,314.18 724.43,337.88 748.81,368.88 773.19,375.52 797.57,373.37 821.95,372.92 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
 <polyline points='602.53,299.96 626.91,304.06 651.29,311.07 675.67,319.79 700.05,324.50 724.43,344.59 748.81,372.86 773.19,374.73 797.57,370.66 821.95,384.87 ' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.20; stroke-linecap: butt;' />
-<text x='834.13' y='316.23' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='37.18px' lengthAdjust='spacingAndGlyphs'>Oxford</text>
-<text x='763.03' y='350.35' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='108.65px' lengthAdjust='spacingAndGlyphs'>Vale of White Horse</text>
+<text x='809.78' y='333.30' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='37.18px' lengthAdjust='spacingAndGlyphs'>Oxford</text>
+<text x='763.02' y='350.35' text-anchor='middle' style='font-size: 11.04px;fill: #FFFF33; font-family: "Liberation Sans";' textLength='108.65px' lengthAdjust='spacingAndGlyphs'>Vale of White Horse</text>
 <rect x='590.34' y='233.10' width='268.18' height='188.12' style='stroke-width: 1.07; stroke: #333333;' />
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw3MjAuMDA=)'>
