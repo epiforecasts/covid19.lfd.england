@@ -3,6 +3,8 @@
 
 # LFD prevalence in England
 
+> **Archived.** No longer maintained; last updated June 2022.
+
 This data visualises the latest LFD positivy data published as part of
 the [Weekly statistics for NHS Test and
 Trace](https://www.gov.uk/government/collections/nhs-test-and-trace-statistics-england-weekly-reports).
